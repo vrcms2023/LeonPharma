@@ -1,0 +1,92 @@
+{
+  "name": "VRCMS Theme One",
+  "fontFamily": "Poppins, 'Fira Sans', sans-serif, Arial, verdana",
+  "background": "#ffffff",
+  "bodyBgImage": "",
+
+  "textColor": "#333333",
+
+  "white": "#ffffff",
+  "black": "#000000",
+  "gray444": "#444444",
+  "gray888": "#888888",
+  "gray": "#999999",
+  "lightgray": "#e3e3e3",
+  "verylightgray": "#f3f3f3",
+  "error": "#f23838",
+
+  "primaryColor": "#3CD9D2",
+  "primaryHoverColor": "#000000",
+  "secondaryColor": "#888888",
+  "secondaryHoverColor": "#333333",
+  "teritoryColor": "#2A5CA0",
+  "teritoryHoverColor": "#2A5CA0",
+  "transparent": "transparent",
+
+  "topStripBgColor": "#000000",
+  "topStripTextColor": "#ffffff",
+  "topStripTitleColor": "",
+  "topStripLinkColor": "#ffffff",
+  "topStripLinkHoverColor": "#3CD9D2",
+
+  "navbarBg": "#ffffff",
+  "navbarTextColor": "#ffffff",
+  "navbarLinkColor": "#000000",
+  "navbarLinkBgColor": "#748E31",
+  "navbarLinkActiveColor": "#27AAE1",
+  "navbarLinkHoverColor": "#748E31",
+
+  "navbarChildLinkBgColor": "#3cd9d2",
+  "navbarChildLinkColor": "#ffffff",
+  "navbarChildLinkHoverColor": "#17427f",
+
+  "carouselSlideTitleColor": "#ffffff",
+  "carouselSlideCaptionColor": "#ffffff",
+
+  "ABriefBg": "#f3f3f3",
+  "ABriefTextColor": "#000000",
+  "ABriefTitleBorderColor": "#27AAE1",
+
+  "ABriefAboutBg": "#ffffff",
+  "ABriefAboutTextColor": "#000000",
+  "ABriefAboutTitleBorderColor": "#27AAE1",
+
+  "testimonialsBg": "#444444",
+  "testimonialsHeadingColor": "#DDFF86",
+  "testimonialsTextColor": "#ffffff",
+  "testimonialsLinkColor": "#ffffff",
+  "testimonialsLinkHoverColor": "#DDFF86",
+
+  "teamBg": "#ffffff",
+  "teamTitleColor": "#000000",
+  "teamTextColor": "#000000",
+  "teamLinkColor": "#27AAE1",
+  "teamHoverColor": "#ffffff",
+  "teamIconColor": "#000000",
+
+  "briefIntroBg": "#ffffff",
+  "briefIntroTitleColor": "#006690",
+  "briefIntroTextColor": "#3F3F3F",
+
+  "newsCardBg": "#ffffff",
+  "newsCardTextColor": "#000000",
+  "newsCardTitleColor": "#17427f",
+  "newsCardLinkColor": "#17427f",
+  "newsCardLinkHoverColor": "#3cd9d2",
+
+  "pageBannerTextColor": "#ffffff",
+  "pageBannerTitleColor": "#ffffff",
+  "pageBannerSubTitleColor": "#DDFF86",
+
+  "footerBgColor": "#000000",
+  "footerTextColor": "#ffffff",
+  "footerTitleColor": "#ffffff",
+  "footerLinkColor": "#ffffff",
+  "footerLinkHoverColor": "#748E31",
+
+  "pageTitleColor": "#000000",
+
+  "aboutPageBgColor": "",
+  "aboutPageTitleColor": "",
+  "aboutPageTextColor": ""
+}
