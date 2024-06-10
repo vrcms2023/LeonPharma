@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CareersPageStyled = styled.div`
   .jobTitle {
-    color: ${({ theme }) => theme.primaryColor};
+    color: ${({ theme }) => theme.secondaryColor};
   }
 
   .title {
@@ -10,8 +10,8 @@ export const CareersPageStyled = styled.div`
   }
 
   .jobPost {
-    border: 1px solid ${({ theme }) => theme.lightgray};
-    background-color: ${({ theme }) => theme.white};
+    border: 2px solid ${({ theme }) => theme.white};
+    background-color: ${({ theme }) => theme.primaryColor};
     border-bottom: 4px solid ${({ theme }) => theme.secondaryColor};
 
     &:hover {
@@ -28,7 +28,31 @@ export const CareersPageStyled = styled.div`
   }
 
   .currentOpenings {
-    border: 1px solid ${({ theme }) => theme.lightgray};
+    max-height: 300px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(225,242,253,0.3); 
+        border-radius: 3px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(232,252,187,0.5); 
+    }
+
+    .title {
+      color: ${({ theme }) => theme.primaryColor};
+      border-bottom: 1px solid ${({ theme }) => theme.white};
+      text-align: center;
+    }
+
+    background: ${({ theme }) => theme.secondaryColor};
+    border: 1px solid ${({ theme }) => theme.white};
 
     ul {
       list-style: none;
@@ -52,11 +76,14 @@ export const CareersPageStyled = styled.div`
   }
 
   .jobBriefDetails {
-    background-color: ${({ theme }) => theme.verylightgray};
+    background: linear-gradient(90deg, rgba(225,242,253,1) 0%, ${({ theme }) => theme.white} 50%, rgba(225,242,253,1) 100%);
+    // background-color: rgba(255,255,255, .3);
+    // border: 1px solid ${({ theme }) => theme.secondaryColor};
   }
 
   .jobDescription {
-    background-color: ${({ theme }) => theme.white};
+    background-color: ${({ theme }) => theme.primaryColor};
+    // border: 1px solid ${({ theme }) => theme.white};
 
     ul {
       margin-left: 25px;

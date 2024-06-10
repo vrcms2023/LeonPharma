@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 // Components
-import FooterAdminFeilds from "../../Admin/Components/forms/FooterInputs";
-import ContactInputs from "../../Admin/Components/forms/ContactInputs";
-import AdminTermsPolicy from "../../Admin/Components/TermsPrivacy/index";
-import { getFooterValues } from "../../features/footer/footerActions";
+import FooterAdminFeilds from "../../Frontend_Admin/Components/forms/FooterInputs";
+import ContactInputs from "../../Frontend_Admin/Components/forms/ContactInputs";
+import AdminTermsPolicy from "../../Frontend_Admin/Components/TermsPrivacy/index";
+import { getFooterValues } from "../../redux/footer/footerActions";
 import { axiosClientServiceApi } from "../../util/axiosUtil";
 import { useAdminLoginStatus } from "../customhook/useAdminLoginStatus";
-import { getAddressList } from "../../features/address/addressActions";
+import { getAddressList } from "../../redux/address/addressActions";
 
 // Modal
 import Model from "../../Common/Model";
@@ -21,6 +21,8 @@ import Logo from "../../Images/logo.png";
 
 // Styles
 import { FooterStyled } from "../StyledComponents/Styled-Footer";
+import Ancher from "../Ancher";
+import Title from "../Title";
 
 const Footer = () => {
   const editComponentObj = {
@@ -115,10 +117,19 @@ const Footer = () => {
   return (
     <FooterStyled>
       <footer className="text-center">
-        <div className="container py-5 footerDetails">
-          <div className="row">
+        <div className="container footerDetails">
+          <div className="logo text-center text-md-start">
+              <img
+                src={Logo}
+                alt="SAP Design Studio"
+                className="footerLogo"
+              />
+          </div>
+          <hr className="d-block d-md-none my-4" />
+          <div className="row py-4 py-md-4">
             <div className="col-md-3 text-center text-md-start">
-              <h5 className="text-center text-md-start">Company</h5>
+              {/* <Title title="Company" /> */}
+              
               <ul className="">
                 {menuList?.map((menu) => {
                   return <ChildMenuContent menu={menu} key={menu.id} />;
@@ -157,29 +168,63 @@ const Footer = () => {
                 </li> */}
               </ul>
             </div>
-            <hr className="d-block d-md-none mt-3" />
+            <hr className="d-block d-md-none my-4" />
 
-            <div className="col-md-3 text-center text-md-start">
+            {/* <div 
+              className={`col-md-3 text-center text-md-start ${
+                isAdmin
+                  ? "border border-warning mb-3 position-relative"
+                  : ""
+              }`}
+            >
+               {isAdmin && (
+                  <Ancher 
+                    Ancherpath="/contact"
+                    AncherClass="btn btn-warning float-end"
+                    handleModel=""
+                    AncherLabel="Edit"
+                    icon=""
+                    // icon="fa-arrow-right"
+                    iconCss="ms-2 m-auto"
+                  />
+                )}
               {address && (
                 <>
-                  <h5 className="text-center text-md-start">Address</h5>
+                  <Title title="Address"  />
+
                   <p className="m-0 fw-bold">{address.company_name}</p>
                   <p className="m-0">{address.address_dr_no}</p>
                   <p className="m-0">{address.street} </p>
                   <p className="m-0">{address.location} </p>
                   <p className="m-0">{address.city} </p>
                   <p className="m-0">{address.state}</p>
-                  <p className="m-0">{address.location_title}</p>
+                  <p className="mb-4">{address.location_title}</p>
                 </>
-              )}
-            </div>
+              )}              
+            </div> */}
 
-            <div className="col-md-3 text-center text-md-start mb-3 reachUs">
-              <h5 className="d-none d-sm-block">Reach Us</h5>
+             <div 
+              className={`col-md-4 col-lg-3 text-center text-md-start reachUs ${
+                isAdmin
+                  ? "border border-warning position-relative"
+                  : ""
+              }`}
+            >
+              {isAdmin && (
+                  <Ancher 
+                    Ancherpath="/contact"
+                    AncherClass="btn btn-warning float-end"
+                    handleModel=""
+                    AncherLabel="Edit"
+                    icon=""
+                    iconCss="ms-2 m-auto"
+                  />
+                )}
+              {/* <Title title="Reach Us"  /> */}
               {address.phonen_number ? (
-                <p className="m-0 ">
+                <p className="m-0 pb-3">
                   <i
-                    className="fa fa-phone-square fs-4 me-2"
+                    className="fa fa-phone fs-5 me-2"
                     aria-hidden="true"
                   ></i>
                   {address?.phonen_number}
@@ -188,9 +233,9 @@ const Footer = () => {
                 ""
               )}
               {address.phonen_number_2 ? (
-                <p className="m-0 ">
+                <p className="m-0 pb-3">
                   <i
-                    className="fa fa-phone-square fs-4 me-2"
+                    className="fa fa-phone fs-5 me-2"
                     aria-hidden="true"
                   ></i>
                   {address?.phonen_number_2}
@@ -201,7 +246,7 @@ const Footer = () => {
               {address.phonen_number_3 ? (
                 <p className="m-0 ">
                   <i
-                    className="fa fa-whatsapp fs-4 me-2"
+                    className="fa fa-whatsapp fs-5 me-2"
                     aria-hidden="true"
                   ></i>
                   {address?.phonen_number_3}
@@ -209,15 +254,16 @@ const Footer = () => {
               ) : (
                 ""
               )}
-              <br />
+              
               {address.emailid ? (
                 <>
-                  <p className="m-0 ">
+                  <p className="m-0 pb-2">
                     <i
-                      className="fa fa-envelope-o fs-4 me-2"
+                      className="fa fa-paper-plane fs-5 me-2"
                       aria-hidden="true"
                     ></i>
-                    {address?.emailid}
+                    <Link to={`mailto: ${address?.emailid}`}>{address?.emailid}</Link>
+                    
                   </p>
                 </>
               ) : (
@@ -225,12 +271,12 @@ const Footer = () => {
               )}
               {address.emailid_2 ? (
                 <>
-                  <p className="m-0 ">
+                  <p className="m-0 pb-3 ">
                     <i
-                      className="fa fa-envelope-o fs-4 me-2"
+                      className="fa fa-paper-plane fs-5 me-2"
                       aria-hidden="true"
                     ></i>
-                    {address?.emailid_2}
+                    <Link to={`mailto: ${address?.emailid_2}`}>{address?.emailid_2}</Link>
                   </p>
                 </>
               ) : (
@@ -240,26 +286,39 @@ const Footer = () => {
                 <>
                   <p className="m-0 ">
                     <i
-                      className="fa fa-envelope-o fs-4 me-2"
+                      className="fa fa-envelope fs-5 me-2"
                       aria-hidden="true"
                     ></i>
-                    {address?.emailid_3}
+                    <Link to={`mailto: ${address?.emailid_3}`}>{address?.emailid_3}</Link>
                   </p>
                 </>
               ) : (
                 ""
-              )}
-            </div>
-            <hr className="d-block d-md-none" />
+              )}  
+            </div> 
+            <hr className="d-block d-md-none mt-3 mb-4" />
             {
-              <div className="col-md-3 pb-3 pb-md-0">
+              <div 
+                  className={`col-md-5 col-lg-6 pb-md-0 socialMedia d-flex flex-column align-items-center justify-content-md-center justify-content-lg-end align-items-md-end ${
+                    isAdmin
+                      ? "border border-warning mb-3 position-relative"
+                      : ""
+                  }`}
+              >
+{/*                 
+                <Title title="Social Media" />
                 <img
                   src={Logo}
                   alt="SAP Design Studio"
                   className="footerLogo"
-                />
+                /> */}
                 <div className="socialLinks">
-                  {/* <h5>Social Media</h5> */}
+                  
+                  {isAdmin && (
+                    <EditIcon
+                      editHandler={() => editHandler("address", true)}
+                    />
+                  )}
                   {footerValues.facebook_url && (
                     <Link to={footerValues.facebook_url} target="_blank">
                       <i
@@ -312,49 +371,55 @@ const Footer = () => {
                       <i className="fa fa-pinterest" aria-hidden="true"></i>
                     </Link>
                   )}
-                  {isAdmin && (
-                    <EditIcon
-                      editHandler={() => editHandler("address", true)}
-                    />
-                  )}
+                  
                 </div>
+                <small className="mt-3 fw-medium text-center text-md-end"> {fullYear} Copyright Leon Pharma Corp. All rights reserved.</small>
               </div>
+              
             }
           </div>
         </div>
 
-        <div className="text-center p-3 footerCopyRights">
+        <div className="p-3 footerCopyRights">
           {isAdmin && (
             <EditIcon editHandler={() => editHandler("termsPolacy", true)} />
           )}
 
-          <div className="d-flex justify-content-center align-items-center flex-column flex-md-row gap-2">
-            <small>&copy; {fullYear} - All rights reserved</small>
-            <span className="d-inline-block  d-none d-md-block">|</span>
-            <Link
-              to=""
-              className="text-decoration-underline"
-              onClick={() => showModel("TC")}
-            >
-              Terms & Conditions
-            </Link>{" "}
-            <span className="d-inline-block d-none d-md-block">|</span>
-            <Link
-              to=""
-              className="text-decoration-underline"
-              onClick={() => showModel("PP")}
-            >
-              Privacy Policy
-            </Link>
+        <div className="container">
+          <div className="row">
+            <div className="d-flex flex-column flex-md-row justify-content-center gap-3">
+              <div className="d-flex justify-content-center align-items-center flex-column flex-md-row gap-2">
+                {/* <small>&copy; {fullYear} - All rights reserved</small> */}
+                {/* <span className="d-inline-block  d-none d-md-block">|</span> */}
+                <Link
+                  to=""
+                  className="text-decoration-underline"
+                  onClick={() => showModel("TC")}
+                >
+                  Terms & Conditions
+                </Link>{" "}
+                <span className="d-inline-block d-none d-md-block">|</span>
+                <Link
+                  to=""
+                  className="text-decoration-underline"
+                  onClick={() => showModel("PP")}
+                >
+                  Privacy Policy
+                </Link>
+                
+              </div>
+
+              <span className="d-block mt-2 ">
+                Designed & developed by{" "}
+                <a href="http://www.varadesigns.com" className="dby">
+                  <small className="p-1 fw-bold d-inline-block">
+                    VARA-DESIGNS
+                  </small>
+                </a>
+              </span>
+            </div>
+        </div>
           </div>
-          <span className="d-block mt-2 dby">
-            designed & developed by{" "}
-            <a href="http://www.varadesigns.com">
-              <small className="p-1 fw-bold d-inline-block ">
-                VARA-DESIGNS
-              </small>
-            </a>
-          </span>
         </div>
       </footer>
 
@@ -407,8 +472,8 @@ export default Footer;
 
 const ChildMenuContent = ({ menu }) => {
   return (
-    <li>
-      <Link to={menu?.page_url} className="ms-0">
+    <li className="">
+      <Link to={menu?.page_url} >
         {menu?.page_label}
       </Link>
     </li>

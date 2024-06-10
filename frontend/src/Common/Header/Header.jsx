@@ -3,7 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 import _ from "lodash";
 import { getCookie } from "../../util/cookieUtil";
 import { useDispatch, useSelector } from "react-redux";
-import AdminHeader from "../../Admin/Components/Header";
 
 import ModalBg from "../../Common/ModelBg";
 // import EditIcon from "../AdminEditIcon";
@@ -18,16 +17,17 @@ import {
   getMenu,
   getSelectedUserPermissions,
   getUser,
-} from "../../features/auth/authActions";
+} from "../../redux/auth/authActions";
 import {
   storeServiceMenuValueinCookie,
   urlStringFormat,
 } from "../../util/commonUtil";
 
-import { getServiceValues } from "../../features/services/serviceActions";
+import { getServiceValues } from "../../redux/services/serviceActions";
 import { isAppAccess } from "../../util/permissions";
 
 import Logo from "../../Images/logo.png";
+import LogoForm from "../../Frontend_Admin/Components/forms/Logo";
 
 const Header = () => {
   const editComponentObj = {
@@ -152,7 +152,7 @@ const Header = () => {
     <StyledMenu>
       {componentEdit.menu ? (
         <div className="adminEditTestmonial">
-          <AdminHeader editHandler={editHandler} />
+          <LogoForm editHandler={editHandler} />
         </div>
       ) : (
         ""

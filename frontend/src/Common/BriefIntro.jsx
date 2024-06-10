@@ -5,8 +5,21 @@ import { axiosClientServiceApi } from "../util/axiosUtil";
 // Styles
 
 import { BriefIntroStyled } from "./StyledComponents/Styled-BriefIntro";
+import Ancher from "./Ancher";
 
-const BriefIntroFrontend = ({ pageType, introState }) => {
+const BriefIntroFrontend = ({ 
+pageType, 
+introState, 
+linkCss, 
+linkLabel, 
+moreLink, 
+introTitleCss = "", 
+introSubTitleCss = "", 
+introDecTitleCss = "", 
+detailsContainerCss, 
+anchorContainer, 
+anchersvgColor, 
+showLink }) => {
   const [introValue, setIntroValues] = useState([]);
 
   useEffect(() => {
@@ -28,17 +41,17 @@ const BriefIntroFrontend = ({ pageType, introState }) => {
   }, [introState, pageType]);
 
   return (
-    <div className="container-fluid">
-      <div className="row">
+    <div className="container">
+      
         <BriefIntroStyled>
-          <div className=" briefIntro">
-            <div className="col-md-10 offset-md-1 py-3 py-md-5 ">
+        <div className="row">
+            <div className={`${detailsContainerCss} briefIntro`}>
               {introValue?.intro_title === "" ? (
                 ""
               ) : (
                 <Title
                   title={introValue?.intro_title}
-                  cssClass="mb-0 fw-bold fs-2 text-center"
+                  cssClass={introTitleCss}
                 />
               )}
               {introValue?.subTitle === "" ? (
@@ -46,18 +59,29 @@ const BriefIntroFrontend = ({ pageType, introState }) => {
               ) : (
                 <Title
                   title={introValue?.subTitle}
-                  cssClass="mb-3 fw-bold text-secondary text-center"
+                  cssClass={introSubTitleCss}
                 />
               )}
-              <p className="text-center lh-md m-0 fw-medium">
+              <p className={introDecTitleCss}>
                 {introValue?.intro_desc
                   ? introValue?.intro_desc
                   : "Please Update Brief Intro"}
               </p>
+              
+              {showLink && (
+                <div className={anchorContainer}>
+                <Ancher
+                  AncherLabel={linkLabel}
+                  Ancherpath={moreLink}
+                  AncherClass={linkCss}
+                  AnchersvgColor={anchersvgColor}
+                />
+              </div>
+              )}
+              
             </div>
           </div>
         </BriefIntroStyled>
-      </div>
     </div>
   );
 };

@@ -14,10 +14,9 @@ from pathlib import Path
 import os
 from datetime import timedelta
 import mimetypes
-# import pymysql
-
-# pymysql.version_info = (1, 4, 6, 'final', 0)  # (major, minor, micro, releaselevel, serial)
-# pymysql.install_as_MySQLdb()
+import pymysql
+pymysql.version_info = (1, 4, 6, 'final', 0)  # (major, minor, micro, releaselevel, serial)
+pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,7 +38,7 @@ else:
     print("debug not workig")
 
 #ALLOWED_HOSTS = ['jettik8s.xyz', '127.0.0.1']
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','www.leonpharmacorp.com']
 
 mimetypes.add_type("text/css", ".css", True)
 
@@ -78,6 +77,7 @@ INSTALLED_APPS = [
     'pagesAdministration',
     'pagePermissions',
     'debug_toolbar',
+    'products'
 ]
 
 MIDDLEWARE = [
@@ -117,6 +117,7 @@ WSGI_APPLICATION = 'vrcmsapi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+### ---------------------------- DATABASES Configuration for Local development ----------------------------- ###
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -128,6 +129,20 @@ DATABASES = {
     }
 }
 
+### ---------------------------- DATABASES Configuration for Production ----------------------------- ###
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'leomtechDB',
+#         'USER': 'leonpharmacorp',
+#         'PASSWORD': 'H?6[upt+FzW?',
+#         'HOST': 'demo.leonpharmacorp.com',
+#         'PORT':3306,
+#     }
+# }
+
+
+
 ### ---------------------------- Email Configuration for Local development ----------------------------- ###
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = os.environ.get('EMAIL_HOST')
@@ -137,15 +152,22 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 EMAIL_USE_SSL = True
 EMAIL_USE_TLS = False
+EMAIL_THANK_YOU_MESSAGE="Thank you contact Leon pharma Corp"
 
-# env properties not workign need check later
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 465
-# EMAIL_HOST_USER = 'ramajsworks@gmail.com'
-# EMAIL_HOST_PASSWORD = 'yacmpavxfgfdtozz'
-# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-# EMAIL_USE_SSL = True
+
+### ---------------------------- Email Configuration for Production ----------------------------- ###
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 # EMAIL_USE_TLS = False
+# EMAIL_HOST = 'localhost'
+# EMAIL_HOST_USER = 'noreply@leomtech.com'
+# EMAIL_HOST_PASSWORD = 'C3q^CcO6@s9K'
+# #EMAIL_HOST_USER = 'contact@leomtech.com'
+# #EMAIL_HOST_PASSWORD = 'Myleomtech*9'
+# EMAIL_PORT = 25
+# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
+
 
 
 
@@ -251,11 +273,10 @@ DJOSER = {
 
 CORS_ORIGIN_ALLOW_ALL  = True
 
-#CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', 'http://192.168.29.99:3000']
-
-#CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "http://192.168.29.99:3000"]
-
-
 CSRF_TRUSTED_ORIGINS = [os.environ.get('HOST_URL')]
 
 CORS_ALLOWED_ORIGINS = [os.environ.get('HOST_URL')]
+
+# CORS_ALLOWED_ORIGINS = ['http://demo.leonpharmacorp.com','https://demo.leonpharmacorp.com']
+
+# CSRF_TRUSTED_ORIGINS = ['http://demo.leonpharmacorp.com','https://demo.leonpharmacorp.com']
