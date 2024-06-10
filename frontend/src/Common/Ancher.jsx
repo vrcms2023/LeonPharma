@@ -7,12 +7,16 @@ const Ancher = ({
   Ancherpath,
   AnchersvgColor,
   handleModel,
+  icon,
+  iconCss
 }) => {
   return (
     <>
       <Link to={Ancherpath} className={AncherClass} onClick={handleModel}>
-        <span>{AncherLabel}</span>
-        {AnchersvgColor && (
+        <span>{AncherLabel} 
+        {icon && <i class={`fa ${icon} ${iconCss}`} aria-hidden="true"></i>}
+        </span>
+        {/* {AnchersvgColor && (
           <svg
             width="30"
             height="16"
@@ -25,7 +29,7 @@ const Ancher = ({
               fill={AnchersvgColor}
             />
           </svg>
-        )}
+        )} */}
       </Link>
     </>
   );

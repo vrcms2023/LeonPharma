@@ -1,34 +1,21 @@
 import styled from "styled-components";
 
 export const ContactPageStyled = styled.div`
-  .formTitle {
-    color: ${({ theme }) => theme.primaryColor};
-  }
-
-  .title {
-    color: ${({ theme }) => theme.pageTitleColor};
-  }
-
-  .contactAddress {
-    background-color: ${({ theme }) => theme.white};
-    color: ${({ theme }) => theme.black};
-  }
-
-  .contactForm {
-    width: 60%;
-    margin: 0 auto;
-
-    input,
-    textarea {
-      background-color: #eeeeee;
-      border: 1px solid #cacaca;
-      padding: 12px 10px;
+  .contactPage {
+    .contactAddress {
+      color: ${({ theme }) => theme.black};
+  
+      i {
+        color: ${({ theme }) => theme.secondaryColor};
+      }
     }
-  }
+    
+    .quickContact {
+      background: ${({ theme }) => theme.primaryColor};
 
-  @media (max-width: 768px) {
-    .contactForm {
-      width: 90% !important;
+      .formTitle {
+        color: ${({ theme }) => theme.secondaryColor};
+      }
     }
   }
 `;

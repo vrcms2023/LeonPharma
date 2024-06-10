@@ -14,10 +14,9 @@ from pathlib import Path
 import os
 from datetime import timedelta
 import mimetypes
-# import pymysql
-
-# pymysql.version_info = (1, 4, 6, 'final', 0)  # (major, minor, micro, releaselevel, serial)
-# pymysql.install_as_MySQLdb()
+import pymysql
+pymysql.version_info = (1, 4, 6, 'final', 0)  # (major, minor, micro, releaselevel, serial)
+pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,6 +77,7 @@ INSTALLED_APPS = [
     'pagesAdministration',
     'pagePermissions',
     'debug_toolbar',
+    'products'
 ]
 
 MIDDLEWARE = [
@@ -137,6 +137,7 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 EMAIL_USE_SSL = True
 EMAIL_USE_TLS = False
+EMAIL_THANK_YOU_MESSAGE="Thank you contact VRCMS"
 
 # env properties not workign need check later
 # EMAIL_HOST = 'smtp.gmail.com'

@@ -15,6 +15,8 @@ const Search = ({
   searchQuery,
   imageGallery,
   setImageGallery,
+  hideSearchBy,
+  searchBy = " Search ",
 }) => {
   const userCookie = getCookie("access");
 
@@ -27,6 +29,8 @@ const Search = ({
       searchResults();
     }
   };
+
+  // console.log(hideSearchBy, "hideSearchBy")
 
   // const searchResults = () => {
   //   const searchResults = imageGallery?.filter(image => image.title.toLowerCase() === searchQuery.toLowerCase())
@@ -54,11 +58,11 @@ const Search = ({
 
   return (
     <div className="d-flex justify-conent-start align-items-start flex-column">
-      <div className="input-group mb-1 search my-3 my-md-0">
+      <div className="input-group mb-1 search my-2 my-md-0 ">
         <input
           type="text"
           className="form-control"
-          placeholder="Search by"
+          placeholder={searchBy}
           aria-label="Search"
           onChange={onChangeInputHandler}
           onKeyDown={handleKeyDown}
@@ -70,13 +74,15 @@ const Search = ({
           <i className="fa fa-search" aria-hidden="true"></i>
         </span>
       </div>
-      <div className="d-flex justify-conent-center align-items-center gap-2">
-        {/* <span className="text-muted">Search by</span> */}
-        <small className="text-dark">
-          <span className="fw-bolder">Search by</span> :{" "}
-          {searchfiledDeatails ? searchfiledDeatails : ""}
-        </small>
-      </div>
+      {hideSearchBy && (
+        <div className="d-flex justify-conent-center align-items-center gap-2">
+          {/* <span className="text-muted">Search by</span> */}
+          <small className="text-dark">
+            <span className="fw-bolder">Search by</span> :{" "}
+            {searchfiledDeatails ? searchfiledDeatails : ""}
+          </small>
+        </div>
+      )}
     </div>
   );
 };

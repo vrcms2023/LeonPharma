@@ -15,7 +15,7 @@ from common.CustomPagination import CustomPagination
     
 class CreateAppNews(generics.CreateAPIView):
     permission_classes = [permissions.IsAuthenticated]
-    queryset = AppNews.objects.all()
+    queryset = AppNews.objects.all().order_by("news_position")
     serializer_class = AppNewsSerializer
     pagination_class = CustomPagination
 
@@ -24,7 +24,7 @@ class CreateAppNews(generics.CreateAPIView):
     """
 
     def get(self, request, format=None):
-        snippets = AppNews.objects.all()
+        snippets = AppNews.objects.all().order_by("news_position")
         results = get_custom_paginated_data(self, snippets)
         if results is not None:
             return results
@@ -37,6 +37,8 @@ class CreateAppNews(generics.CreateAPIView):
         requestObj['created_by'] = request.data["created_by"]
     
         serializer = AppNewsSerializer(data=requestObj)
+        if 'path' in request.data and not request.data['path']:
+            serializer.remove_fields(['path','originalname','contentType'])
         if serializer.is_valid():
             serializer.save()
             return Response({"appNews": serializer.data}, status=status.HTTP_201_CREATED)
@@ -63,6 +65,8 @@ class AppNewsDetail(APIView):
         requestObj = get_news_data_From_request_Object(request)
         requestObj['updated_by'] = request.data["updated_by"]
         serializer = AppNewsSerializer(snippet, data=requestObj)
+        if 'path' in request.data and not request.data['path']:
+            serializer.remove_fields(['path','originalname','contentType'])
         if serializer.is_valid():
             serializer.save()
             return Response({"appNews": serializer.data}, status=status.HTTP_200_OK)
@@ -77,7 +81,7 @@ class AppNewsDetail(APIView):
 
 class ClientAppNews(generics.CreateAPIView):
     permission_classes = [permissions.AllowAny]
-    queryset = AppNews.objects.all()
+    queryset = AppNews.objects.all().order_by("news_position")
     serializer_class = AppNewsSerializer
     pagination_class = CustomPagination
 
@@ -86,7 +90,7 @@ class ClientAppNews(generics.CreateAPIView):
     """
 
     def get(self, request, format=None):
-        snippets = AppNews.objects.all()
+        snippets = AppNews.objects.all().order_by("news_position")
         results = get_custom_paginated_data(self, snippets)
         if results is not None:
             return results

@@ -9,7 +9,16 @@ import SkeletonImage from "../Skeltons/SkeletonImage";
 // Styles
 import { PageBannerStyled } from "../StyledComponents/Styled-PageBanner";
 
-const Banner = ({ getBannerAPIURL, bannerState, pageLoadServiceName }) => {
+const Banner = ({
+  getBannerAPIURL,
+  bannerState,
+  pageLoadServiceName,
+  bannerTitleCss = "title text-end fs-2",
+  bannerSubTitleCss = "subTitle text-end fw-normal",
+  bannerDescriptionCss = "description text-end d-block mt-2 fs-6",
+  imageCss = "w-100",
+  bannerContainerCss = "titleCaption d-flex align-items-end justify-content-end flex-column",
+}) => {
   const [bannerdata, setBannerData] = useState([]);
 
   useEffect(() => {
@@ -39,30 +48,27 @@ const Banner = ({ getBannerAPIURL, bannerState, pageLoadServiceName }) => {
             (bannerdata.banner_descripiton && bannerdata.banner_title) ||
             bannerdata.banner_descripiton ||
             bannerdata.banner_title
-              ? "titleCaption d-flex align-items-end justify-content-end flex-column"
+              ? bannerContainerCss
               : ""
           }
         >
           {bannerdata.banner_title === "" ? (
             ""
           ) : (
-            <Title
-              title={bannerdata.banner_title}
-              cssClass="title text-end fs-2"
-            />
+            <Title title={bannerdata.banner_title} cssClass={bannerTitleCss} />
           )}
           {bannerdata.banner_subTitle === "" ? (
             ""
           ) : (
             <Title
               title={bannerdata.banner_subTitle}
-              cssClass="subTitle text-end fw-normal"
+              cssClass={bannerSubTitleCss}
             />
           )}
           {bannerdata.banner_descripiton === "" ? (
             ""
           ) : (
-            <small className="description text-end d-block mt-2 fs-6">
+            <small className={bannerDescriptionCss}>
               {bannerdata.banner_descripiton}
             </small>
           )}
@@ -73,7 +79,7 @@ const Banner = ({ getBannerAPIURL, bannerState, pageLoadServiceName }) => {
               bannerdata?.path ? getImagePath(bannerdata.path) : getDummyImage()
             }
             alt={bannerdata.alternitivetext}
-            className="w-100"
+            className={imageCss}
           />
         ) : (
           <SkeletonImage />
