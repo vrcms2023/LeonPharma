@@ -11,7 +11,7 @@ const FilterComponent = ({
   setSearchquery,
   searchQuery,
   searchBy,
-  hideSearchBy
+  hideSearchBy,
 }) => {
   if (category.length === 0) return;
   const changeCategory = (event) => {
@@ -19,6 +19,9 @@ const FilterComponent = ({
       return item.id === event.target.value;
     })[0];
     setSelectedCategory(item);
+    // if (item) {
+    //   setSelectedCategory(item);
+    // }
   };
   return (
     <div className="container position-relative ">
@@ -45,9 +48,9 @@ const FilterComponent = ({
           <Search
             results={category}
             setObject={setResponseData}
-            clientSearchURL={`/products/productSearch/${selectedCategory.id}/`}
-            adminSearchURL={`/products/createProduct/${selectedCategory.id}/`}
-            clientDefaultURL={`/products/productSearch/${selectedCategory.id}/`}
+            clientSearchURL={`/products/productSearch/${selectedCategory?.id}/`}
+            adminSearchURL={`/products/createProduct/${selectedCategory?.id}/`}
+            clientDefaultURL={`/products/productSearch/${selectedCategory?.id}/`}
             searchfiledDeatails={"Product Name"}
             setPageloadResults={setPageloadResults}
             setSearchquery={setSearchquery}

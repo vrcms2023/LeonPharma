@@ -118,10 +118,12 @@ const ProductsPage = () => {
 
       setSelectedCategory(_data);
       setPageType(_data?.id ? _data?.id : pageType);
-    } else {
-      dispatch(getAllCategories());
     }
   }, [categories, id]);
+
+  useEffect(() => {
+    dispatch(getAllCategories());
+  }, []);
 
   useEffect(() => {
     dispatch(getAllCategories());
@@ -321,7 +323,7 @@ const ProductsPage = () => {
               componentTitle={compTtile}
               selectedItem={selectedProduct}
               setSelectedItemState={setSelectedProduct}
-              imageGetURL={`/products/createProduct/${selectedCategory.id}/`}
+              imageGetURL={`/products/createProduct/${selectedCategory?.id}/`}
               imagePostURL="/products/createProduct/"
               imageUpdateURL="/products/updateProduct/"
               imageDeleteURL="/products/updateProduct/"
@@ -339,11 +341,11 @@ const ProductsPage = () => {
           {paginationData?.total_count ? (
             <CustomPagination
               paginationData={paginationData}
-              paginationURL={`/products/getClinetProduct/${selectedCategory.id}/`}
+              paginationURL={`/products/getClinetProduct/${selectedCategory?.id}/`}
               paginationSearchURL={
                 searchQuery
                   ? `products/productSearch/${searchQuery}/`
-                  : `/products/getClinetProduct/${selectedCategory.id}/`
+                  : `/products/getClinetProduct/${selectedCategory?.id}/`
               }
               searchQuery={searchQuery}
               setCurrentPage={setCurrentPage}
@@ -409,7 +411,7 @@ const ProductsPage = () => {
                     pageType={"products-Abrief"}
                     componentFlip={false}
                     showForm={true}
-                    categoryId={selectedCategory.id}
+                    categoryId={selectedCategory?.id}
                   />
                 </div>
               </div>

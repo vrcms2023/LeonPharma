@@ -407,7 +407,7 @@ export const getProductFormDynamicFields = (selectedCategory) => {
       label: "category_id",
       readonly: true,
       type: "hidden",
-      value: selectedCategory.id,
+      value: selectedCategory?.id,
       fieldName: "category_id",
     },
     category_name: {
