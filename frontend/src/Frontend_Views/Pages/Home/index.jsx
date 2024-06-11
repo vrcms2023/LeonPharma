@@ -37,32 +37,18 @@ import {
 } from "../../../util/commonUtil";
 import {
   getCarouselFields,
-  getFormDynamicFields,
   getTestimonialsFields,
   getTitleAndDescriptionFields,
-  getserviceOfferedFields,
   imageDimensionsJson,
 } from "../../../util/dynamicFormFields";
-
-import ImageInputsForm from "../../../Frontend_Admin/Components/forms/ImgTitleIntoForm";
-
-// // import Img1 from '../../../Images/future.png';
-// import randomImg1 from '../../../Images/randomService1.png'
-// import randomImg2 from '../../../Images/randomService2.png'
-// import randomImg3 from '../../../Images/randomService3.png'
 
 // Styles
 import "./Home.css";
 
 // Images
-import imgOngoing from "../../../Images/carousel1.jpg";
-import imgCompleted from "../../../Images/carousel2.jpg";
-import imgFuture from "../../../Images/carousel3.jpg";
-import ProductsList from "../Products/ProductsList";
+
 import { ProductHilightsStyled } from "../../../Common/StyledComponents/Styled-Products-Hilights";
 import { TestimonialCarouselPageStyled } from "../../../Common/StyledComponents/Styled-TestimonialCarousel";
-import { RandomHomeServicesStyled } from "../../../Common/StyledComponents/Random-HomeServices";
-import Button from "../../../Common/Button";
 import { ABriefIntroStyled } from "../../../Common/StyledComponents/Styled-ABriefAbout";
 import { getAllCategories } from "../../../redux/products/categoryActions";
 import Product from "../Products/Product";
@@ -195,34 +181,6 @@ const Home = () => {
   return (
     <>
       <div className="container-fluid">
-        {/* BANNER COMPONENT  */}
-        {/* <div className="row">
-          <div className="col-md-12 p-0 position-relative homePage">
-            {isAdmin && hasPermission && (
-              <EditIcon editHandler={() => editHandler("banner", true)} />
-            )}
-            <Banner
-              getBannerAPIURL={`banner/clientBannerIntro/${pageType}-banner/`}
-              bannerState={componentEdit.banner}
-            />
-          </div>
-        </div>
-        {componentEdit.banner ? (
-          <div className="adminEditTestmonial">
-            <ImageInputsForm
-              editHandler={editHandler}
-              componentType="banner"
-              pageType={`${pageType}-banner`}
-              imageLabel="Banner Image"
-              showDescription={false}
-              showExtraFormFields={getFormDynamicFields(`${pageType}-banner`)}
-              dimensions={imageDimensionsJson("banner")}
-            />
-          </div>
-        ) : (
-          ""
-        )} */}
-
         {/* CAROUSEL COMPONENT  */}
         <div className="row">
           <div className="col-md-12 p-0 carousel">
@@ -275,7 +233,7 @@ const Home = () => {
                       <DynamicForm
                         editHandler={editHandler}
                         componentType={productComp.product_development}
-                        componentTitle="Product Development component"
+                        componentTitle="Product Development"
                         formPostURL={`/carousel/createHomeIntro/`}
                         formUpdateURL={`/carousel/updateHomeIntro/`}
                         editObject={productDevelopment}
@@ -308,7 +266,7 @@ const Home = () => {
                       <DynamicForm
                         editHandler={editHandler}
                         componentType={productComp.product_distribution}
-                        componentTitle="Product Distribution component"
+                        componentTitle="Product Distribution"
                         formPostURL={`/carousel/createHomeIntro/`}
                         formUpdateURL={`/carousel/updateHomeIntro/`}
                         editObject={productDistribution}
@@ -341,7 +299,7 @@ const Home = () => {
                       <DynamicForm
                         editHandler={editHandler}
                         componentType={productComp.product_registration}
-                        componentTitle="Product Distribution component"
+                        componentTitle="Product Distribution"
                         formPostURL={`/carousel/createHomeIntro/`}
                         formUpdateURL={`/carousel/updateHomeIntro/`}
                         editObject={productRegistration}
@@ -394,9 +352,9 @@ const Home = () => {
               linkCss="btn btn-outline d-flex justify-content-center align-items-center gap-3"
               linkLabel="Read More"
               moreLink=""
-              introTitleCss = "fs-3 fw-medium text-md-center"
-              introSubTitleCss = "fw-medium text-muted text-md-center"
-              introDecTitleCss = "fs-6 fw-normal w-75 m-auto text-md-center"
+              introTitleCss="fs-3 fw-medium text-md-center"
+              introSubTitleCss="fw-medium text-muted text-md-center"
+              introDecTitleCss="fs-6 fw-normal w-75 m-auto text-md-center"
               detailsContainerCss="col-md-10 offset-md-1 py-3"
               anchorContainer="d-flex justify-content-center align-items-center mt-4"
               anchersvgColor="#17427C"

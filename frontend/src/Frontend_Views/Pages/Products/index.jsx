@@ -297,39 +297,7 @@ const ProductsPage = () => {
                     editHandler("product", true);
                   }}
                 />
-                // <EditIcon editHandler={() => editHandler("product", true)} />
               )}
-              {/* <div>
-                {productsList?.length} of{" "}
-                <strong>{productsList?.length}</strong>
-              </div>
-              <span className="d-none d-md-block"> | </span> */}
-              {/*{/*<div className="d-flex justify-content-end align-items-center gap-1">
-                 <span>Show </span> 
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>show</option>
-                  <option value="1">5</option>
-                  <option value="2">10</option>
-                  <option value="3">25</option>
-                  <option value="3">50</option>
-                  <option value="3">75</option>
-                  <option value="3">100</option>
-                </select>*/}
-                {/* <span>entries</span> 
-              </div>*/}
-              {/* <span className="d-none d-md-block"> | </span>
-              <div>
-                <Link
-                  className="moreLink "
-                  // onClick={() => downloadFile(editObject?.category_fileuplod)}
-                >
-                  File
-                  <i
-                    class="fa fa-download ms-1 fs-5 rounded-2 p-1 border border-1 border-info bg-white"
-                    aria-hidden="true"
-                  ></i>
-                </Link>
-              </div> */}
             </div>
           </div>
 

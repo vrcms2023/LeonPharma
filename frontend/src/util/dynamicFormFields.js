@@ -12,6 +12,11 @@ export const getProductCategoryBannerFormFields = (pageType) => {
       type: "text",
       fieldName: "banner_subTitle",
     },
+    moreLink: {
+      label: "Page To Link",
+      type: "text",
+      fieldName: "moreLink",
+    },
     banner_descripiton: {
       label: "Description",
       type: "textarea",
@@ -45,7 +50,7 @@ export const getFormDynamicFields = (pageType) => {
       fieldName: "banner_descripiton",
     },
     moreLink: {
-      label: "PageToLink",
+      label: "Page To Link",
       type: "text",
       fieldName: "moreLink",
     },
@@ -445,10 +450,9 @@ export const getTitleAndDescriptionFields = (pageType) => {
       validationObject: { required: "Please enter Title" },
     },
     intro_morelink: {
-      label: "More link",
+      label: "Page To Link",
       type: "text",
       fieldName: "intro_morelink",
-      validationObject: { required: "Please enter Title" },
     },
     intro_desc: {
       label: "Description",

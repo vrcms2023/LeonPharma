@@ -30,9 +30,11 @@ export const SimpleTitleDescComponent = ({
     <>
       <Title title={formvalues?.intro_title} cssClass="fs-5 fw-medium mb-2" />
       <p>{formvalues?.intro_desc}</p>
-      <Link to={formvalues?.intro_morelink} className="btn btn-outline mt-3">
-        More
-      </Link>
+      {formvalues?.intro_morelink && (
+        <Link to={formvalues?.intro_morelink} className="btn btn-outline mt-3">
+          More
+        </Link>
+      )}
     </>
   );
 };
