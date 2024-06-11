@@ -8,6 +8,7 @@ import SkeletonImage from "../Skeltons/SkeletonImage";
 
 // Styles
 import { PageBannerStyled } from "../StyledComponents/Styled-PageBanner";
+import { Link } from "react-router-dom";
 
 const Banner = ({
   getBannerAPIURL,
@@ -52,25 +53,24 @@ const Banner = ({
               : ""
           }
         >
-          {bannerdata.banner_title === "" ? (
-            ""
-          ) : (
+          {bannerdata.banner_title && (
             <Title title={bannerdata.banner_title} cssClass={bannerTitleCss} />
           )}
-          {bannerdata.banner_subTitle === "" ? (
-            ""
-          ) : (
+          {bannerdata.banner_subTitle && (
             <Title
               title={bannerdata.banner_subTitle}
               cssClass={bannerSubTitleCss}
             />
           )}
-          {bannerdata.banner_descripiton === "" ? (
-            ""
-          ) : (
+          {bannerdata.banner_descripiton && (
             <small className={bannerDescriptionCss}>
               {bannerdata.banner_descripiton}
             </small>
+          )}
+          {bannerdata.moreLink && (
+            <Link className="btn btn-outline" to={bannerdata.moreLink}>
+              More
+            </Link>
           )}
         </div>
         {bannerdata.path ? (

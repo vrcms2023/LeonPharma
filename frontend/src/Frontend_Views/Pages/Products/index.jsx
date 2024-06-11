@@ -118,10 +118,12 @@ const ProductsPage = () => {
 
       setSelectedCategory(_data);
       setPageType(_data?.id ? _data?.id : pageType);
-    } else {
-      dispatch(getAllCategories());
     }
   }, [categories, id]);
+
+  useEffect(() => {
+    dispatch(getAllCategories());
+  }, []);
 
   useEffect(() => {
     dispatch(getAllCategories());
@@ -297,39 +299,7 @@ const ProductsPage = () => {
                     editHandler("product", true);
                   }}
                 />
-                // <EditIcon editHandler={() => editHandler("product", true)} />
               )}
-              {/* <div>
-                {productsList?.length} of{" "}
-                <strong>{productsList?.length}</strong>
-              </div>
-              <span className="d-none d-md-block"> | </span> */}
-              {/*{/*<div className="d-flex justify-content-end align-items-center gap-1">
-                 <span>Show </span> 
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>show</option>
-                  <option value="1">5</option>
-                  <option value="2">10</option>
-                  <option value="3">25</option>
-                  <option value="3">50</option>
-                  <option value="3">75</option>
-                  <option value="3">100</option>
-                </select>*/}
-                {/* <span>entries</span> 
-              </div>*/}
-              {/* <span className="d-none d-md-block"> | </span>
-              <div>
-                <Link
-                  className="moreLink "
-                  // onClick={() => downloadFile(editObject?.category_fileuplod)}
-                >
-                  File
-                  <i
-                    class="fa fa-download ms-1 fs-5 rounded-2 p-1 border border-1 border-info bg-white"
-                    aria-hidden="true"
-                  ></i>
-                </Link>
-              </div> */}
             </div>
           </div>
 
@@ -353,7 +323,7 @@ const ProductsPage = () => {
               componentTitle={compTtile}
               selectedItem={selectedProduct}
               setSelectedItemState={setSelectedProduct}
-              imageGetURL={`/products/createProduct/${selectedCategory.id}/`}
+              imageGetURL={`/products/createProduct/${selectedCategory?.id}/`}
               imagePostURL="/products/createProduct/"
               imageUpdateURL="/products/updateProduct/"
               imageDeleteURL="/products/updateProduct/"
@@ -371,11 +341,11 @@ const ProductsPage = () => {
           {paginationData?.total_count ? (
             <CustomPagination
               paginationData={paginationData}
-              paginationURL={`/products/getClinetProduct/${selectedCategory.id}/`}
+              paginationURL={`/products/getClinetProduct/${selectedCategory?.id}/`}
               paginationSearchURL={
                 searchQuery
                   ? `products/productSearch/${searchQuery}/`
-                  : `/products/getClinetProduct/${selectedCategory.id}/`
+                  : `/products/getClinetProduct/${selectedCategory?.id}/`
               }
               searchQuery={searchQuery}
               setCurrentPage={setCurrentPage}
@@ -441,7 +411,7 @@ const ProductsPage = () => {
                     pageType={"products-Abrief"}
                     componentFlip={false}
                     showForm={true}
-                    categoryId={selectedCategory.id}
+                    categoryId={selectedCategory?.id}
                   />
                 </div>
               </div>

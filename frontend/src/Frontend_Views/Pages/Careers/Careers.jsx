@@ -85,8 +85,6 @@ const Careers = () => {
           bannerState={componentEdit.banner}
         />
       </div>
-      
-      
 
       {componentEdit.banner ? (
         <div className="adminEditTestmonial">
@@ -136,11 +134,11 @@ const Careers = () => {
         ""
       )} */}
 
-      <CareerFilterStyled>
+      {/* <CareerFilterStyled>
         <div className="container p-5 py-3 careersFilter">
           <CareersFilter />
         </div>
-      </CareerFilterStyled>
+      </CareerFilterStyled> */}
 
       <div className="container mt-4 my-md-5 careerItems">
         {isAdmin && hasPermission && (
