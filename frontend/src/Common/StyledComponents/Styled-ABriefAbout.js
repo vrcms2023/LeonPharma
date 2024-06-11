@@ -6,6 +6,10 @@ export const ABriefIntroStyled = styled.div`
         background: linear-gradient(90deg, rgba(225,242,253,1) 0%, rgba(255,255,255,1) 50%, rgba(225,242,253,1) 100%);
     }
 
+    .formTitle {
+        display: none
+    }
+
     .randomServices {
         margin-top: 130px;
         margin-bottom: 130px;

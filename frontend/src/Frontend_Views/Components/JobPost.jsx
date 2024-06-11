@@ -302,10 +302,10 @@ const JobPost = ({ addJobs, posts, setPosts, setPageloadResults }) => {
               <p className="text-center fs-4">
                 There are no news items found. Please create news items.
               </p>
-              <Link to="/login" className="btn btn-primary fs-5 w-25">
+              {/* <Link to="/login" className="btn btn-primary fs-5 w-25">
                 Login to Add Careers{" "}
                 <i className="fa fa-plus mx-2" aria-hidden="true"></i>{" "}
-              </Link>
+              </Link> */}
             </>
           )}
         </div>
