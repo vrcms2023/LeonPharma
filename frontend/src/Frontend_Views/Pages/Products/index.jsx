@@ -299,15 +299,13 @@ const ProductsPage = () => {
                 />
                 // <EditIcon editHandler={() => editHandler("product", true)} />
               )}
-              <div>
-                {/* Showing 1 –  */}
+              {/* <div>
                 {productsList?.length} of{" "}
                 <strong>{productsList?.length}</strong>
-                {/* results */}
               </div>
-              <span className="d-none d-md-block"> | </span>
-              <div className="d-flex justify-content-end align-items-center gap-1">
-                {/* <span>Show </span> */}
+              <span className="d-none d-md-block"> | </span> */}
+              {/*{/*<div className="d-flex justify-content-end align-items-center gap-1">
+                 <span>Show </span> 
                 <select class="form-select" aria-label="Default select example">
                   <option selected>show</option>
                   <option value="1">5</option>
@@ -316,10 +314,10 @@ const ProductsPage = () => {
                   <option value="3">50</option>
                   <option value="3">75</option>
                   <option value="3">100</option>
-                </select>
-                {/* <span>entries</span> */}
-              </div>
-              <span className="d-none d-md-block"> | </span>
+                </select>*/}
+                {/* <span>entries</span> 
+              </div>*/}
+              {/* <span className="d-none d-md-block"> | </span>
               <div>
                 <Link
                   className="moreLink "
@@ -331,7 +329,7 @@ const ProductsPage = () => {
                     aria-hidden="true"
                   ></i>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
 

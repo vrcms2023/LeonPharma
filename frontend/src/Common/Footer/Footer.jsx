@@ -206,11 +206,12 @@ const Footer = () => {
              <div 
               className={`col-md-4 col-lg-3 text-center text-md-start reachUs ${
                 isAdmin
-                  ? "border border-warning position-relative"
+                  // ? "border border-warning position-relative"
+                  ? ""
                   : ""
               }`}
             >
-              {isAdmin && (
+              {/* {isAdmin && (
                   <Ancher 
                     Ancherpath="/contact"
                     AncherClass="btn btn-warning float-end"
@@ -219,7 +220,7 @@ const Footer = () => {
                     icon=""
                     iconCss="ms-2 m-auto"
                   />
-                )}
+                )} */}
               {/* <Title title="Reach Us"  /> */}
               {address.phonen_number ? (
                 <p className="m-0 pb-3">

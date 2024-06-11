@@ -209,9 +209,12 @@ const Contact = () => {
                   >
                     <Title
                       title={item.location_title}
-                      cssClass="mb-2 fs-4 text-black"
+                      cssClass=""
+                      mainTitleClassess="text-black fs-4 mb-2"
+                      subTitleClassess=""
                     />
                     <div className="mb-2 contactAddress">
+                    
                       <p className="m-0 fw-bold">{item.company_name}</p>
                       <p className="m-0">{item.address_dr_no}</p>
                       <p className="m-0">{item.street} </p>
