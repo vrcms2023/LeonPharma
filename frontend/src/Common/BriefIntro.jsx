@@ -52,6 +52,8 @@ showLink }) => {
                 <Title
                   title={introValue?.intro_title}
                   cssClass={introTitleCss}
+                  mainTitleClassess="mb-3"
+                  subTitleClassess=""
                 />
               )}
               {introValue?.subTitle === "" ? (
@@ -60,6 +62,7 @@ showLink }) => {
                 <Title
                   title={introValue?.subTitle}
                   cssClass={introSubTitleCss}
+                  mainTitleClassess="mb-2"
                 />
               )}
               <p className={introDecTitleCss}>

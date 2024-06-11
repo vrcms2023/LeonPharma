@@ -204,7 +204,7 @@ const Footer = () => {
             </div> */}
 
              <div 
-              className={`col-md-4 col-lg-3 text-center text-md-start reachUs ${
+              className={`col-md-4 col-lg-5 text-center text-md-start reachUs ${
                 isAdmin
                   // ? "border border-warning position-relative"
                   ? ""
@@ -245,7 +245,7 @@ const Footer = () => {
                 ""
               )}
               {address.phonen_number_3 ? (
-                <p className="m-0 ">
+                <p className="m-0 pb-3">
                   <i
                     className="fa fa-whatsapp fs-5 me-2"
                     aria-hidden="true"
@@ -287,7 +287,8 @@ const Footer = () => {
                 <>
                   <p className="m-0 ">
                     <i
-                      className="fa fa-envelope fs-5 me-2"
+                      // className="fa fa-envelope fs-5 me-2"
+                      className="fa fa-paper-plane fs-5 me-2"
                       aria-hidden="true"
                     ></i>
                     <Link to={`mailto: ${address?.emailid_3}`}>{address?.emailid_3}</Link>
@@ -300,7 +301,7 @@ const Footer = () => {
             <hr className="d-block d-md-none mt-3 mb-4" />
             {
               <div 
-                  className={`col-md-5 col-lg-6 pb-md-0 socialMedia d-flex flex-column align-items-center justify-content-md-center justify-content-lg-end align-items-md-end ${
+                  className={`col-md-5 col-lg-4 pb-md-0 socialMedia d-flex flex-column align-items-center justify-content-md-center justify-content-lg-end align-items-md-end ${
                     isAdmin
                       ? "border border-warning mb-3 position-relative"
                       : ""

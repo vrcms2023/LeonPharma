@@ -83,6 +83,7 @@ export const ProductItemStyled = styled.div`
         border: 2px solid ${({theme}) => theme.white};
         padding-top: 20px;
         padding-bottom: 20px;
+        z-index: 99999;
 
         @media(min-width: 991px) and (max-width: 1024px) {
             right: 60px;

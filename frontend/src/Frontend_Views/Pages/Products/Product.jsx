@@ -21,7 +21,7 @@ const Product = ({ item, categoryId, editHandler, deleteProduct, pathName }) => 
     >
       <ProductItemStyled>
         {isAdmin && hasPermission && (
-          <div className="d-flex justify-content-end gap-2">
+          <div className="d-flex justify-content-center gap-2">
             {editHandler && (
               <Link
                 onClick={() => editHandler("product", true, item)}
@@ -48,13 +48,15 @@ const Product = ({ item, categoryId, editHandler, deleteProduct, pathName }) => 
           <img
             src={getImagePath(item.path)}
             alt={item.alternitivetext}
-            className="w-100 rounded-2 shadow object-fit-cover productImage"
+            className="w-75 rounded-2 shadow object-fit-cover productImage"
           />
         </Link>
         
         <Title
           title={locationPath.pathname === "/" || locationPath.pathname === "/home" ? item.category_name : item.product_name}
-          cssClass="productName fs-6 py-3 text-black fw-medium"
+          cssClass="productName "
+          mainTitleClassess="fs-6 py-3 text-black text-center fw-medium"
+          subTitleClassess=""
         />
         {/* <p>{item.description}</p> */}
       </ProductItemStyled>
