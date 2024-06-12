@@ -282,12 +282,14 @@ const ProductsPage = () => {
 
         <div className="container productsList pt-5">
           <div className="row mb-4">
-            <div className="col-md-12 col-lg-6 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0 align-items-center">
-              <Title
-                title={`CATEGORY -> ${selectedCategory?.category_name}`}
-                cssClass={"fw-medium fs-4"}
-              />{" "}
-            </div>
+            {selectedCategory?.category_name && (
+              <div className="col-md-12 col-lg-6 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0 align-items-center">
+                <Title
+                  title={`CATEGORY -> ${selectedCategory?.category_name}`}
+                  cssClass={"fw-medium fs-4"}
+                />
+              </div>
+            )}
             <div className="col-md-12 col-lg-6 d-flex flex-column flex-sm-row justify-content-end align-items-center gap-3">
               {selectedCategory?.id && isAdmin && hasPermission && (
                 <Button
@@ -338,7 +340,7 @@ const ProductsPage = () => {
         )}
 
         <div>
-          {paginationData?.total_count ? (
+          {paginationData?.total_count && selectedCategory?.id ? (
             <CustomPagination
               paginationData={paginationData}
               paginationURL={`/products/getClinetProduct/${selectedCategory?.id}/`}
