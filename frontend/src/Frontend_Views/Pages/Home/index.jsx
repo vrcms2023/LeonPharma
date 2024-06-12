@@ -324,13 +324,11 @@ const Home = () => {
             {homeCategoriesList.map(
               (category) =>
                 category?.products?.length > 0 && (
-                  <>
-                    <Product
-                      item={category.products[0]}
-                      categoryId={category.id}
-                    />
-                    {/* {category.category_name} */}
-                  </>
+                  <Product
+                    key={category.id}
+                    item={category.products[0]}
+                    categoryId={category.id}
+                  />
                 )
             )}
           </div>
