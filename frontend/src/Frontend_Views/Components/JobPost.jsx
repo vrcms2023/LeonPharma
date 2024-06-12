@@ -126,7 +126,7 @@ const JobPost = ({ addJobs, posts, setPosts, setPageloadResults }) => {
       {posts?.length > 0 ? (
         posts.map((item, index) => (
           <div
-            className={`col-md-6 col-lg-3 mt-3 mt-md-4 position-relative`}
+            className={`col-md-6 col-lg-3 p-4 p-md-auto mt-2 mt-md-4 position-relative`}
             key={item.id}
           >
             <div className="d-flex gap-5 gap-sm-4 gap-md-3 gap-lg-3 justify-content-end mb-2 p-1">
@@ -188,9 +188,10 @@ const JobPost = ({ addJobs, posts, setPosts, setPageloadResults }) => {
                 <div>
                   <Link
                     to={`/career-details/${item.id}/`}
-                    className="text-secondary"
+                    className="btn btn-outline"
                   >
-                    <i className="fa fa-expand" aria-hidden="true"></i>
+                    {/* <i className="fa fa-expand me-3" aria-hidden="true"></i> */}
+                    View Detailed
                   </Link>
                 </div>
               )}
@@ -210,25 +211,33 @@ const JobPost = ({ addJobs, posts, setPosts, setPageloadResults }) => {
             {/* publihser Icon */}
 
             <div className="p-3 jobPost">
-              <small className="d-block location mb-3">
+              <div className="d-flex align-items-center location mb-3">
                 <i
-                  className="fa fa-map-marker fs-4 me-1"
+                  className="fa fa-map-marker fs-2 me-2"
                   aria-hidden="true"
-                ></i>{" "}
-                {item.job_location}
-              </small>
+                ></i>
+                <span className="fs-6">{item.job_location}</span>
+              </div>
               <div className="mt-0 mb-3">
                 <Title
                   title={item.job_title}
-                  cssClass="fs-5 fw-bold jobTitle"
+                  cssClass="jobTitle"
+                  mainTitleClassess="fs-6 fw-medium "
+                  subTitleClassess=""
                 />
               </div>
               <div className="mt-0 mb-3">
-                <Title title="Company" cssClass="fw-bold fs-6" />
+                <Title title="Company" 
+                  mainTitleClassess="fs-6 fw-medium "
+                  subTitleClassess=""
+                />
                 <p className="m-0">{item.company_name} </p>
               </div>
               <div className="">
-                <Title title="Job Description" cssClass="fw-bold fs-6" />
+                <Title title="Job Description" 
+                 mainTitleClassess="fs-6 fw-medium"
+                  subTitleClassess=""
+                />
                 <p className="m-0">
                   <div
                     dangerouslySetInnerHTML={{
@@ -239,54 +248,26 @@ const JobPost = ({ addJobs, posts, setPosts, setPageloadResults }) => {
               </div>
 
               <div className="d-block my-2">
-                <Title title="Experience" cssClass="fw-bold fs-6" />
+                <Title title="Experience" 
+                mainTitleClassess="fs-6 fw-medium "
+                subTitleClassess="" />
+
                 {item.experience_from ? item.experience_from : 0} to{" "}
                 {item.experience_to ? item.experience_to : 0} Years
               </div>
-              <small className="d-block">
-                <Title title="Posted on" cssClass="fw-bold fs-6" />
+              <div className="d-block">
+                <Title title="Posted on"
+                mainTitleClassess="fs-6 fw-medium "
+                subTitleClassess=""
+                 />
                 {showPosteddate(item.posted_date) === 0 ? (
                   "Today"
                 ) : (
-                  <>
-                    [{" "}
-                    <strong className="">
-                      {showPosteddate(item.posted_date)}
-                    </strong>{" "}
-                    ] days ago
-                  </>
+                    <span className="fw-medium">
+                      {showPosteddate(item.posted_date)} days ago
+                    </span>
                 )}
-              </small>
-
-              {/* {isAdmin ? (
-                  <div className="text-end">
-                    <Link
-                      to={`/career-details/${item.id}/`}
-                      className="stretched-link text-secondary"
-                    >
-                      <i className="fa fa-expand" aria-hidden="true"></i>
-                    </Link>
-                  </div>
-                ) : (
-                  ""
-                )}
-                {isAdmin ? (
-                  <div className="mt-3 text-end deletePost">
-                    <Link
-                      onClick={(event) =>
-                        deleteJobPost(item.id, item.job_title)
-                      }
-                      className="bg-danger p-2 rounded"
-                    >
-                      <i
-                        className="fa fa-trash-o fs-5 text-white"
-                        aria-hidden="true"
-                      ></i>
-                    </Link>
-                  </div>
-                ) : (
-                  ""
-                )} */}
+              </div>
             </div>
           </div>
         ))
@@ -298,15 +279,9 @@ const JobPost = ({ addJobs, posts, setPosts, setPageloadResults }) => {
             </p>
           )}
           {isAdmin && hasPermission && (
-            <>
               <p className="text-center fs-4">
                 There are no news items found. Please create news items.
               </p>
-              {/* <Link to="/login" className="btn btn-primary fs-5 w-25">
-                Login to Add Careers{" "}
-                <i className="fa fa-plus mx-2" aria-hidden="true"></i>{" "}
-              </Link> */}
-            </>
           )}
         </div>
       )}
