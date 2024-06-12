@@ -122,9 +122,6 @@ const Home = () => {
       });
     };
 
-    if (categories.length === 0) {
-      dispatch(getAllCategories());
-    }
     if (categories.length > 0 && homeCategoriesList.length === 0) {
       getHomePageCategoryList();
     }
@@ -132,6 +129,7 @@ const Home = () => {
 
   useEffect(() => {
     removeActiveClass();
+    dispatch(getAllCategories());
   }, []);
 
   useEffect(() => {
