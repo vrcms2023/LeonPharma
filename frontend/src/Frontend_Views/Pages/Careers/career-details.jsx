@@ -122,7 +122,9 @@ const Careers = () => {
             <div className="col-8 col-md-10">
               <Title
                 title="Careers Details"
-                cssClass="fw-medium fs-4 pageTitle "
+                cssClass="pageTitle "
+                mainTitleClassess="fs-4 fw-medium "
+                subTitleClassess=""
               />
               
             </div>
@@ -139,12 +141,6 @@ const Careers = () => {
           </div>
       </div>
 
-      <CareerFilterStyled>
-        <div className="container p-5 py-3 careersFilter">
-          <CareersFilter />
-        </div>
-      </CareerFilterStyled>
-
       <CareersPageStyled>
         <div className="container py-4 mb-md-5 py-md-4">
           
@@ -160,20 +156,11 @@ const Careers = () => {
                   ""
                 )}
 
-                {/* <div className="mt-3">
-                  <span className="d-block">
-                    <strong>Department</strong> : Engineering - Software & QA
-                  </span>
-                  <span className="d-block">
-                    <strong>Employment Type</strong>: Full Time, Permanent
-                  </span>
-                </div> */}
+                
               </div>
             </div>
             <div className="col-md-3 mt-4 mt-md-0">
               <JobCurrentOpenings />
-
-              <ApplyForm />
             </div>
           </div>
         </div>

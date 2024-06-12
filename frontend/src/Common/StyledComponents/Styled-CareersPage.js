@@ -47,7 +47,7 @@ export const CareersPageStyled = styled.div`
 
     .title {
       color: ${({ theme }) => theme.primaryColor};
-      border-bottom: 1px solid ${({ theme }) => theme.white};
+      border-bottom: 1px solid ${({ theme }) => theme.primaryColor};
       text-align: center;
     }
 
@@ -65,7 +65,7 @@ export const CareersPageStyled = styled.div`
         padding: 5px 0;
 
         &:hover {
-          color: ${({ theme }) => theme.secondaryColor};
+          color: ${({ theme }) => theme.black};
         }
       }
     }

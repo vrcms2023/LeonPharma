@@ -102,44 +102,6 @@ const Careers = () => {
         ""
       )}
 
-      {/* Introduction */}
-      {/* {isAdmin && hasPermission && (
-        <EditIcon editHandler={() => editHandler("briefIntro", true)} />
-      )}
-
-      <BriefIntroFrontend
-        introState={componentEdit.briefIntro}
-        linkCss="btn btn-outline d-flex justify-content-center align-items-center"
-        linkLabel="Read More"
-        moreLink=""
-        showLink={false}
-        introTitleCss = "fs-3 fw-medium text-md-center"
-        introSubTitleCss = "fw-medium text-muted text-md-center"
-        introDecTitleCss = "fs-6 fw-normal w-75 m-auto text-md-center"
-        detailsContainerCss="col-md-10 offset-md-1"
-        anchorContainer="d-flex justify-content-start align-items-start mt-4"
-        anchersvgColor="#17427C"
-        pageType={pageType}
-      />
-
-      {componentEdit.briefIntro ? (
-        <div className="adminEditTestmonial">
-          <AdminBriefIntro
-            editHandler={editHandler}
-            componentType="briefIntro"
-            pageType={pageType}
-          />
-        </div>
-      ) : (
-        ""
-      )} */}
-
-      {/* <CareerFilterStyled>
-        <div className="container p-5 py-3 careersFilter">
-          <CareersFilter />
-        </div>
-      </CareerFilterStyled> */}
-
       <div className="container mt-4 my-md-5 careerItems">
         {isAdmin && hasPermission && (
           <div className="text-end mb-4">
@@ -169,7 +131,10 @@ const Careers = () => {
           <CareersPageStyled>
             <div className="row mb-4 pb-4">
               <div className="col-md-6">
-                <Title title="Careers" cssClass="fs-3 pageTitle" />
+                <Title title="Careers" cssClass="pageTitle"
+                mainTitleClassess="fs-3 fw-medium "
+                subTitleClassess=""
+                />
               </div>
 
               <div className="col-md-6">

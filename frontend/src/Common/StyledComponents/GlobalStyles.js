@@ -128,7 +128,7 @@ body {
 }
 
 .btn-outline:hover { 
-    border: 1px solid ${({ theme }) => theme.primaryColor} !important; 
+    border: 1px solid ${({ theme }) => theme.white} !important; 
     color:${({ theme }) => theme.secondaryColor};
 }
 
