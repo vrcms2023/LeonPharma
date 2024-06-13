@@ -6,7 +6,7 @@ export const ProductStyled = styled.div`
     width: 35%;
     min-width: 500px;
     right: 25px; 
-    top: -130px; 
+    top: -150px; 
     z-index: 999;
     background: rgb(0,132,207);
 
@@ -41,7 +41,10 @@ export const ProductStyled = styled.div`
     }
 }
 .productsList, .productDetails {
-    margin-top: 60px;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    background: ${({theme}) => theme.primaryColor};
+    // border: 1px solid ${({theme}) => theme.white};
 }
 `;
 
@@ -144,6 +147,11 @@ export const ProductItemStyled = styled.div`
 
 .productImage {
     height: 130px;
+    transition: opacity 0.5s ease, transform 0.5s ease, border-radius 0.5s ease;
+
+    &:hover {
+        transform: scale(1.1) rotate(-0deg);
+    }
 }
 
 // .rightPositioned::before,  .rightPositioned::after {
