@@ -2,6 +2,9 @@ export const fieldValidation = {
   isRequired: {
     required: "Please enter Value",
   },
+  product_name: {
+    required: "Please enter Product Name.",
+  },
   firstName: {
     required: "Please enter First Name.",
   },
