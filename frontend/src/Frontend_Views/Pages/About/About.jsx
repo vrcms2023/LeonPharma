@@ -159,7 +159,7 @@ const About = () => {
               moreLink=""
               introTitleCss = "fs-3 fw-medium text-md-center"
               introSubTitleCss = "fw-medium text-muted text-md-center"
-              introDecTitleCss = "fs-6 fw-normal w-75 m-auto text-md-center"
+              introDecTitleCss = "fs-6 fw-normal m-auto text-md-center"
               detailsContainerCss="col-md-10 offset-md-1 py-3"
               anchorContainer="d-flex justify-content-center align-items-center mt-4"
               anchersvgColor="#17427C"

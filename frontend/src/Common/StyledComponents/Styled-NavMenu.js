@@ -30,7 +30,7 @@ export const StyledMenu = styled.menu`
           margin: 0 12px;
           text-decoration: none;
           font-size: 1.1rem;
-          font-weight: normal;
+          font-weight: 500;
           position: relative;
           
           &:before {
