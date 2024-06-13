@@ -52,14 +52,14 @@ export const ProductItemStyled = styled.div`
     .imgSelected {
         padding-left: 100px;
         padding-right: 100px;
-        img {
-            height: 250px;
-            object-fit: cover;
+        // img {
+        //     height: 250px;
+        //     object-fit: cover;
     
-            @media (max-width: 480px) {
-                height: 200px;
-            }
-        }  
+        //     @media (max-width: 480px) {
+        //         height: 200px;
+        //     }
+        // }  
 
         .btn {
             width: auto;

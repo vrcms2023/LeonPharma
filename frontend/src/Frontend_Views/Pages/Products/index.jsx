@@ -68,6 +68,7 @@ const ProductsPage = () => {
   const [pageType, setPageType] = useState("products");
   const [compTtile, setComptitle] = useState("Add Product");
   const [productsList, setProductsList] = useState([]);
+  const [newCategoryCreation, setNewCategoryCreation] = useState("");
 
   const [paginationData, setPaginationData] = useState({});
   const [pageLoadResult, setPageloadResults] = useState(false);
@@ -148,7 +149,7 @@ const ProductsPage = () => {
         const list = category.filter((list) => list.id !== id);
         setCategory(list);
         setSelectedCategory(list.length > 0 ? list[0] : "");
-
+        setNewCategoryCreation("")
         toast.success(`${selectedCategory?.category_name} is deleted`);
       }
     };
@@ -222,6 +223,13 @@ const ProductsPage = () => {
         </div>
       )}
 
+        {newCategoryCreation && (
+          <div className="bg-info py-2">
+              <div className="fs-5 fw-medium text-success text-center text-white">{newCategoryCreation}</div>
+              <p className="m-0 text-black text-center fw-medium fs-6">Please add a banner and products to the category</p>
+          </div>
+        )}
+
       {componentEdit.category && (
         <div className="adminEditTestmonial">
           <DynamicFormwithFileUplod
@@ -234,6 +242,7 @@ const ProductsPage = () => {
             dynamicFormFields={getCategoryFormDynamicFields()}
             formPostURL={"/products/createCategory/"}
             formUpdateURL={"/products/updateCategory/"}
+            setNewCategoryCreation={setNewCategoryCreation}
           />
         </div>
       )}
@@ -287,13 +296,16 @@ const ProductsPage = () => {
         <div className="container productsList pt-5">
           <div className="row mb-4">
             <div className="col-md-12 col-lg-6 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0 align-items-center">
-              <Title
+              {newCategoryCreation && (
+                <Title
                 title={`CATEGORY -> ${selectedCategory?.category_name}`}
                 cssClass=""
                 mainTitleClassess="fw-medium fs-4"
                 subTitleClassess=""
 
-              />{" "}
+              />
+              )}
+
             </div>
             <div className="col-md-12 col-lg-6 d-flex flex-column flex-sm-row justify-content-end align-items-center gap-3">
               {selectedCategory?.id && isAdmin && hasPermission && (
