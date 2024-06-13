@@ -122,9 +122,6 @@ const Home = () => {
       });
     };
 
-    if (categories.length === 0) {
-      dispatch(getAllCategories());
-    }
     if (categories.length > 0 && homeCategoriesList.length === 0) {
       getHomePageCategoryList();
     }
@@ -132,6 +129,7 @@ const Home = () => {
 
   useEffect(() => {
     removeActiveClass();
+    dispatch(getAllCategories());
   }, []);
 
   useEffect(() => {
@@ -326,13 +324,11 @@ const Home = () => {
             {homeCategoriesList.map(
               (category) =>
                 category?.products?.length > 0 && (
-                  <>
-                    <Product
-                      item={category.products[0]}
-                      categoryId={category.id}
-                    />
-                    {/* {category.category_name} */}
-                  </>
+                  <Product
+                    key={category.id}
+                    item={category.products[0]}
+                    categoryId={category.id}
+                  />
                 )
             )}
           </div>

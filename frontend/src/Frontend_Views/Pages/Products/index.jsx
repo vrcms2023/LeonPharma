@@ -224,9 +224,9 @@ const ProductsPage = () => {
       )}
 
         {newCategoryCreation && (
-          <div className="bg-info py-2">
+          <div className="bg-info py-1">
               <div className="fs-5 fw-medium text-success text-center text-white">{newCategoryCreation}</div>
-              <p className="m-0 text-black text-center fw-medium fs-6">Please add a banner and products to the category</p>
+              <p className=" text-black text-center fw-medium fs-6">Please add a banner and products to the category</p>
           </div>
         )}
 
