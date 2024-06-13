@@ -23,6 +23,7 @@ export default function DynamicFormwithFileUplod({
   formPostURL,
   formUpdateURL,
   formDeleteURL,
+  setNewCategoryCreation,
 }) {
   const closeHandler = () => {
     setEditState(false);
@@ -63,7 +64,9 @@ export default function DynamicFormwithFileUplod({
       "Content-Type": "multipart/form-data",
     };
     try {
+      let categoryCreationMesg;
       if (data?.id) {
+        categoryCreationMesg = " - category has been updated successfully."
         formData.append("updated_by", getCookie("userName"));
         response = await axiosServiceApi.patch(
           `${formUpdateURL}${data.id}/`,
@@ -73,6 +76,7 @@ export default function DynamicFormwithFileUplod({
           }
         );
       } else {
+        categoryCreationMesg = " - Category has been created successfully."
         formData.append("created_by", getCookie("userName"));
         response = await axiosServiceApi.post(formPostURL, formData, {
           headers: header,
@@ -80,6 +84,7 @@ export default function DynamicFormwithFileUplod({
       }
       setSaveState(response.data.category);
       closeHandler();
+      setNewCategoryCreation(response.data.category.category_name + categoryCreationMesg );
     } catch (e) {
       toast.error(e[0]);
     }
