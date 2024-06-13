@@ -12,7 +12,7 @@ const Title = ({
       <div className={`${cssClass} ${mainTitleClassess}`}>
         {title}
         {subTitle ? (
-          <span className={`${subTitleClassess}`}> / {subTitle}</span>
+          <span className={`${subTitleClassess}`}>{subTitle}</span>
         ) : (
           ""
         )}

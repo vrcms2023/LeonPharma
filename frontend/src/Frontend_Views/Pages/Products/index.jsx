@@ -181,17 +181,17 @@ const ProductsPage = () => {
         <div className="container py-4">
           <div className="row ">
             <div className="col-md-12 d-flex justify-content-end align-items-center gap-2">
-              <span>
+              {/* <span>
                 <Title title="CATEGORY - "
                 cssClass=""
                 mainTitleClassess="fw-medium fs-6"
                 subTitleClassess=""
                 />
-              </span>
+              </span> */}
               <Button
                 type="button"
                 cssClass="btn btn-secondary w-auto"
-                label={"Create"}
+                label={"Create New Category"}
                 icon="fa-plus fs-5"
                 isMobile={isMobile}
                 handlerChange={() => {
@@ -296,15 +296,18 @@ const ProductsPage = () => {
         <div className="container productsList pt-5">
           <div className="row mb-4">
             <div className="col-md-12 col-lg-6 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0 align-items-center">
-              {newCategoryCreation && (
+               {selectedCategory?.category_name && (
                 <Title
-                title={`CATEGORY -> ${selectedCategory?.category_name}`}
+                // title={`CATEGORY > ${selectedCategory?.category_name}`}
+                title={`CATEGORY > `}
+                subTitle = {` ${selectedCategory?.category_name}`} 
                 cssClass=""
-                mainTitleClassess="fw-medium fs-4"
-                subTitleClassess=""
-
+                mainTitleClassess="fw-medium fs-5 text-black"
+                subTitleClassess="fs-5 fw-normal text-muted"
               />
               )}
+              
+              
 
             </div>
             <div className="col-md-12 col-lg-6 d-flex flex-column flex-sm-row justify-content-end align-items-center gap-3">
