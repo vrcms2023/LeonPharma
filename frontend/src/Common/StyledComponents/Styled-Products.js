@@ -50,7 +50,7 @@ export const ProductItemStyled = styled.div`
 
 .productDetails {
     .imgSelected {
-        padding-left: 100px;
+        // padding-left: 100px;
         padding-right: 100px;
         // img {
         //     height: 250px;
@@ -60,6 +60,13 @@ export const ProductItemStyled = styled.div`
         //         height: 200px;
         //     }
         // }  
+
+        img  {
+            max-height: 400px;
+            height: 100%;
+            object-fit: fill;
+            border-radius: 10px;
+        }
 
         .btn {
             width: auto;

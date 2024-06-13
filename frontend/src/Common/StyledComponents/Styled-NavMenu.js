@@ -29,7 +29,7 @@ export const StyledMenu = styled.menu`
           color:${({ theme }) => theme.black}; 
           margin: 0 12px;
           text-decoration: none;
-          font-size: 0.9rem;
+          font-size: 1.1rem;
           font-weight: normal;
           position: relative;
           

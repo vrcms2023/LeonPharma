@@ -26,10 +26,10 @@ export const PageBannerStyled = styled.div`
         margin: 0px;
       }
       .subTitle {
-        color: ${({ theme }) => theme.pageBannerSubTitleColor};
+        color: ${({ theme }) => theme.pageBannerTitleColor};
         font-weight: normal !important;
         font-family: "PT Sans Narrow", sans-serif;
-        letter-spacing: .3rem;
+        letter-spacing: .1rem;
         text-transform: uppercase !important;
       }
       .description {

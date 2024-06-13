@@ -313,11 +313,11 @@ const Home = () => {
           </div>
         </ProductHilightsStyled>
 
-        <div className="container mt-0 mt-md-5 pt-md-5">
+        <div className="container mt-0 my-md-5 pt-md-5">
           <Title
             title="Product Categories"
             cssClass=""
-            mainTitleClassess="fs-2 text-center my-5 my-md-5 pt-0 pt-md-5"
+            mainTitleClassess="fs-2 text-center my-5 my-md-5 pt-0"
             subTitleClassess=""
           />
           <div className="row">
@@ -350,9 +350,9 @@ const Home = () => {
               linkCss="btn btn-outline d-flex justify-content-center align-items-center gap-3"
               linkLabel="Read More"
               moreLink=""
-              introTitleCss="fs-3 fw-medium text-md-center"
-              introSubTitleCss="fw-medium text-muted text-md-center"
-              introDecTitleCss="fs-6 fw-normal w-75 m-auto text-md-center"
+              introTitleCss="fs-3 fw-medium text-center"
+              introSubTitleCss="fw-medium text-muted text-center"
+              introDecTitleCss="fs-6 fw-normal w-75 m-auto text-center"
               detailsContainerCss="col-md-10 offset-md-1 py-3"
               anchorContainer="d-flex justify-content-center align-items-center mt-4"
               anchersvgColor="#17427C"
