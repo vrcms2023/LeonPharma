@@ -160,7 +160,9 @@ const ProjectTabs = () => {
             <Title
               title={projectHome.projectCategoryName}
               subTitle={projectTitle}
-              cssClass="blue-900 fs-5 fw-bold"
+              cssClass="pageTitle"
+              mainTitleClassess="blue-900 fs-5 fw-medium"
+              subTitleClassess=""
             />
             <select
               className="form-select shadow-lg border border-1 rounded-0 border-success w-25"

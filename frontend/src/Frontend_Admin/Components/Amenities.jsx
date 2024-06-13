@@ -53,7 +53,11 @@ export const Amenities = ({ title, value, amenities, setAmenities, name }) => {
   };
   return (
     <>
-      <Title title={title} cssClass="fs-5 fw-bold" />
+      <Title title={title} 
+      cssClass=""
+      mainTitleClassess="fs-5 fw-medium"
+      subTitleClassess=""
+      />
       <div className="border border-3 mb-4 shadow-lg">
         {/* <label htmlFor="addImages" className="form-label  ">Add Image's</label> */}
         <textarea

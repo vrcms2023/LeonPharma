@@ -9,7 +9,11 @@ const ApplyForm = () => {
     <div className="container">
                 <div className="row">
                   <div className="col-md-12 py-4">
-                    <Title title="Apply Now" cssClass={"fs-5 fw-medium "}/>
+                    <Title title="Apply Now" 
+                    cssClass="" 
+                    mainTitleClassess="fs-5 fw-medium"
+                    subTitleClassess=""    
+                    />
                     <hr />
                   </div>
                 </div>

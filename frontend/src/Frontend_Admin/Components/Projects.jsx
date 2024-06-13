@@ -7,7 +7,9 @@ const ProjectItem = ({ title, cssClass, projects, handleProjectDelete }) => {
     <>
       <Title
         title={title}
-        cssClass="text-start fw-normal pt-3 mb-3 fs-6 text-dark"
+        cssClass="requiredField" 
+        mainTitleClassess="text-start fw-medium pt-3 mb-3 fs-6 text-dark"
+        subTitleClassess=""
       />
       <table className={`table table-hover border `}>
         <thead>
@@ -138,7 +140,9 @@ export const Projects = ({ project, handleProjectDelete }) => {
         <div className="col-md-6 col-lg-4">
           <Title
             title={"Ongoing Projects"}
-            cssClass="text-start fw-normal pt-3 mb-3 fs-6 text-dark"
+            cssClass=""
+            mainTitleClassess="text-start fw-medium pt-3 mb-3 fs-6 text-dark"
+            subTitleClassess=""
           />
           <div className="fw-bold d-flex justify-content-center align-items-center">
             No project are available
@@ -158,7 +162,9 @@ export const Projects = ({ project, handleProjectDelete }) => {
         <div className="col-md-6 col-lg-4">
           <Title
             title={"Upcoming Projects"}
-            cssClass="text-start fw-normal pt-3 mb-3 fs-6 text-dark"
+            mainTitleClassess="text-start fw-normal pt-3 mb-3 fs-6 text-dark"
+            cssClass=""
+            subTitleClassess=""
           />
           <div className="fw-bold d-flex justify-content-center align-items-center">
             No project are available
@@ -178,7 +184,9 @@ export const Projects = ({ project, handleProjectDelete }) => {
         <div className="col-md-6 col-lg-4">
           <Title
             title={"Completed Projects"}
-            cssClass="text-start fw-normal pt-3 mb-3 fs-6 text-dark"
+            mainTitleClassess="text-start fw-medium pt-3 mb-3 fs-6 text-dark"
+            cssClass=""
+            subTitleClassess=""
           />
           <div className="fw-bold d-flex justify-content-center align-items-center">
             No project are available

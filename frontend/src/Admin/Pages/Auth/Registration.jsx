@@ -76,7 +76,9 @@ const Registration = () => {
             <CSRFToken />
             <Title
               title="Create / Register account"
-              cssClass="text-center text-dark mb-4 fs-4 fw-bold"
+              cssClass=""
+              mainTitleClassess="text-center text-dark mb-4 fs-4 fw-medium"
+              subTitleClassess=""
             />
             <div className="mb-3">
               {error && <Error>{error}</Error>}

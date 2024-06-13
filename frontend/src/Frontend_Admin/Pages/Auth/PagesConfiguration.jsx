@@ -357,7 +357,11 @@ const PagesConfiguration = () => {
       </div>
       <div className="row px-3 px-lg-5">
         <div className="text-end d-flex justify-content-between">
-          <Title title={"Menu Administration"} cssClass="fs-1 pageTitle" />
+          <Title title={"Menu Administration"} 
+          cssClass="pageTitle" 
+          mainTitleClassess="fs-1 "
+          subTitleClassess=""
+          />
         </div>
       </div>
 

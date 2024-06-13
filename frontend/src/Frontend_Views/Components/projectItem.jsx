@@ -16,7 +16,9 @@ const ProjectItem = ({ projectList, projectType }) => {
                 ? projectList[0].projectCategoryName
                 : "Ongoing Projects"
             }
-            cssClass="blue-900 fs-5 mb-3"
+            cssClass=""
+            mainTitleClassess="blue-900 fs-5 mb-3"
+            subTitleClassess=""
           />
         </div>
       </div>
@@ -28,7 +30,9 @@ const ProjectItem = ({ projectList, projectType }) => {
                   <div className="infoStrip">
                     <Title
                       title={project.projectTitle}
-                      cssClass="text-white fs-5"
+                      cssClass=""
+                      mainTitleClassess="text-white fs-5"
+                      subTitleClassess=""
                     />
                     {/* <Link to="" className="blue-900">
                     more details

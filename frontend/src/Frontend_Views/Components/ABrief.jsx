@@ -126,20 +126,21 @@ const ABrief = ({ title, cssClass, linkClass, moreLink, dimensions }) => {
             className="fa fa-angle-left text-muted fs-1 me-2"
             aria-hidden="true"
           ></i>
-          <Title title={"OUR WORK LOCATIONS"} cssClass={"fs-4 fw-medium"} />
+          <Title title={"OUR WORK LOCATIONS"} 
+          cssClass=""
+          mainTitleClassess="fs-4 fw-medium"
+          subTitleClassess=""
+          />
         </div>
 
         {bannerdata ? (
-          <Title title={bannerdata.banner_title} cssClass={cssClass} />
+          <Title title={bannerdata.banner_title} cssClass={cssClass}
+          mainTitleClassess=""
+          subTitleClassess=""
+          />
         ) : (
           ""
         )}
-        {/* <Title
-          title={
-            bannerdata?.banner_title ? bannerdata.banner_title : "upload Title"
-          }
-          cssClass={cssClass}
-        /> */}
 
         <p className="lh-lg mt-md-3">
           {bannerdata?.banner_descripiton

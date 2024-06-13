@@ -110,12 +110,14 @@ export const BriefIntroAdmin = ({ editHandler, componentType, pageType }) => {
       <hr className="m-0" />
       <div className="container my-3">
         {success ? (
-          <>
+          
             <Title
               title="Saved Successfully"
-              cssClass="text-white text-center bg-success py-2"
+              cssClass=""
+              mainTitleClassess="text-white text-center bg-success py-2"
+              subTitleClassess=""
             />
-          </>
+          
         ) : (
           ""
         )}

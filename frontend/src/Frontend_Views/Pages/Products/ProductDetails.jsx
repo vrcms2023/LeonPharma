@@ -86,7 +86,9 @@ const ProductDetails = () => {
               <div className="py-3">
                 <Title
                   title={selectedProduct?.product_name}
-                  cssClass="fs-4 fw-medium mt-1 mt-md-4"
+                  cssClass=""
+                  mainTitleClassess="fs-4 fw-medium mt-1 mt-md-4"
+                  subTitleClassess=""
                 />
                 <div
                   className="mt-2"

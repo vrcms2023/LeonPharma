@@ -14,7 +14,9 @@ const MainPage = () => {
     <div className="d-flex flex-column justify-content-center align-items-center adminMain">
       <Title
         title="Page Content's Customization"
-        cssClass="text-dark fs-3 mb-4 fw-bold text-center"
+        cssClass=""
+        mainTitleClassess="text-dark fs-3 mb-4 fw-medium text-center"
+        subTitleClassess=""
       />
       <ul className="list-group mainLinks">
         <li className="list-group-item list-group-item-action text-center border-secondary py-3">

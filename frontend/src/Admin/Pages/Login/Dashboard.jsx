@@ -169,7 +169,11 @@ const Dashboard = () => {
         </div> */}
       <div className="row px-3 px-md-5 mb-3">
         <div className="text-end d-flex justify-content-between align-items-center flex-column flex-md-row">
-          <Title title="Dashboard" cssClass="text-center blue-500 fs-4" />
+          <Title title="Dashboard" 
+          cssClass=""
+          mainTitleClassess="text-center blue-500 fs-4"
+          subTitleClassess=""
+          />
           <div className="d-flex gap-1 justify-content-between align-items-center">
             <Button
               type=""
@@ -193,7 +197,9 @@ const Dashboard = () => {
       <div className="row px-3 px-md-5 py-4">
         <Title
           title={"Published projects"}
-          cssClass="text-center fw-bolder mb-2 fs-5 text-uppercase green-900"
+          cssClass=""
+          mainTitleClassess="text-center fw-medium mb-2 fs-5 text-uppercase green-9004"
+          subTitleClassess=""
         />
         <hr className="border-dark" />
         {publishProjecstStatus ? (
@@ -211,7 +217,9 @@ const Dashboard = () => {
         <div className="row p-5 pt-0">
           <Title
             title={"Saved / Ready to publish"}
-            cssClass="text-center fw-bolder pt-4 text-uppercase  mb-2 fs-5 green-900"
+            cssClass=""
+            mainTitleClassess="text-center fw-medium text-uppercase mb-2 fs-5 green-900"
+            subTitleClassess=""
           />
           <hr className="border-dark" />
           <Projects
@@ -227,7 +235,9 @@ const Dashboard = () => {
         <div className="row p-5 py-3 bg-gray-light">
           <Title
             title={"Archive projects"}
-            cssClass="text-center fw-bolder pt-4 text-uppercase  mb-2 fs-4 gray-900"
+            cssClass=""
+            mainTitleClassess="text-center fw-medium text-uppercase mb-2 fs-5 green-900"
+            subTitleClassess=""
           />
           <hr className="border-dark" />
           <Projects

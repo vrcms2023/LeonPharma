@@ -38,7 +38,8 @@ const JobCurrentOpenings = () => {
 
   return (
     <div className="py-4 px-3 currentOpenings">
-      <Title title="CURRENT OPENINGS" cssClass="title"
+      <Title title="CURRENT OPENINGS" 
+      cssClass="title"
       mainTitleClassess="mb-3 fs-5"
       subTitleClassess=""
       />

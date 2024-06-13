@@ -29,7 +29,11 @@ const News = ({ item, dateFormat, articleHandler }) => {
           alt=""
         />
       )}
-      <Title title={item.newstitle} cssClass="text-dark fs-6 mt-3 fw-bold" />
+      <Title title={item.newstitle} 
+      cssClass="pageTitle"
+      mainTitleClassess="text-dark fs-6 mt-3 fw-medium"
+      subTitleClassess=""
+      />
       <small>Posted at {dateFormat(item.created_at)}</small>
       <p className="card-text mb-4">{item.description}</p>
       <Link to="" onClick={() => articleHandler(item.id)} className="loadMore">

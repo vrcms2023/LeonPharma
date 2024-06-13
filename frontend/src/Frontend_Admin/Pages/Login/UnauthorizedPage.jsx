@@ -28,7 +28,11 @@ const UnauthorizedPage = () => {
       className="d-flex flex-column justify-content-center align-items-center"
       style={{ marginTop: "200px" }}
     >
-      <Title title="Unauthorized" cssClass="text-dark fs-5 mb-4" />
+      <Title title="Unauthorized" 
+      cssClass=""
+      mainTitleClassess="text-dark fs-5 mb-4"
+      subTitleClassess=""
+      />
       <div className="mt-3">
         <span> Hi {userName},</span>
         You dont have permission to access the applicaiton, please contact

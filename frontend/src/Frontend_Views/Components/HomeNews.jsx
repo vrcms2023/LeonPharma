@@ -242,7 +242,12 @@ const HomeNews = ({ addNewsState, news, setNews, pagetype }) => {
         <div className="newsModel ">
           <div className="newsModalWrapper p-4 bg-white shadow-lg">
             <div className="d-flex justify-content-between align-items-center gap-4 mb-1 pb-2 border-bottom">
-              <Title title={obj.news_title} cssClass="fw-bold fs-6" />
+              <Title 
+              title={obj.news_title} 
+              cssClass=""
+              mainTitleClassess="fw-medium fs-6"
+              subTitleClassess=""
+              />
               <Link
                 onClick={closeModel}
                 className="text-danger text-uppercase d-flex gap-2 justify-content-center align-items-center"

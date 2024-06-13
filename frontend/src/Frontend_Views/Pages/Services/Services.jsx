@@ -295,13 +295,12 @@ const Services = () => {
 
               <div className="row ">
                 <div className="col-12 col-md-8">
-                  <Title title={"Services"} cssClass="fs-3 mb-2 pageTitle" />
-                  {/* <Title
-                title={TitleStringFormat(
-                  selectedServiceProject.services_page_title,
-                )}
-                cssClass="fs-1 mb-2 pageTitle"
-              /> */}
+                  <Title title={"Services"} 
+                  cssClass=" pageTitle" 
+                  mainTitleClassess="fs-3 mb-2"
+                  subTitleClassess=""
+                  />
+                 
                 </div>
               </div>
               {selectedServiceList.map((item, index) => (
@@ -338,7 +337,9 @@ const Services = () => {
                           ? item.feature_title
                           : "Update Feature title"
                       }
-                      cssClass="fs-1 fw-bold mt-3 mb-1"
+                      cssClass=""
+                      mainTitleClassess="fs-1 fw-medium mt-3 mb-1"
+                      subTitleClassess=""
                     />
                     <Title
                       title={
@@ -346,7 +347,9 @@ const Services = () => {
                           ? item.feature_sub_title
                           : "Update Feature sub title"
                       }
-                      cssClass="fs-5 text-secondary mb-2"
+                      cssClass=""
+                      mainTitleClassess="fs-5 text-secondary mb-2"
+                      subTitleClassess=""
                     />
                     <div
                       dangerouslySetInnerHTML={{

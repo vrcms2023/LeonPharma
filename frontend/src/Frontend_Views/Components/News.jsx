@@ -31,7 +31,11 @@ const News = ({ item, articleHandler }) => {
           alt=""
         />
       )}
-      <Title title={item.imageTitle} cssClass="text-dark fs-6 mt-3 fw-bold" />
+      <Title title={item.imageTitle}
+      cssClass=""
+      mainTitleClassess="text-dark fs-6 mt-3 fw-medium"
+      subTitleClassess=""
+      />
       <small>Posted at {getDateValue(item.created_at)}</small>
       <p className="card-text mb-4">{item.imageDescription}</p>
       <Link to="" onClick={() => articleHandler(item.id)} className="loadMore">

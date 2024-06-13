@@ -83,8 +83,6 @@ const UserContactForm = ({ closeModel, downloadPDF }) => {
         )}
 
         <form className="my-2 py-3 py-md-5 contactForm" onSubmit={onFormSubmit}>
-          {/* <Title title="Quick contact" cssClass="text-black fw-bold mb-4" /> */}
-
           <div className="mb-3 row">
             <label
               htmlFor="exampleInputFName"

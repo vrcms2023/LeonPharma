@@ -75,12 +75,19 @@ const ABriefAbout = ({
           <EditIcon editHandler={() => editHandler("whoweare", true)} />
         )}
         {bannerData.banner_title ? (
-          <Title title={bannerData.banner_title} cssClass={cssClass} />
+          <Title title={bannerData.banner_title} cssClass={cssClass}
+          mainTitleClassess=""
+          subTitleClassess=""
+          />
         ) : (
           ""
         )}
         {bannerData.banner_subTitle ? (
-          <Title title={bannerData.banner_subTitle} cssClass="fs-6 my-3" />
+          <Title title={bannerData.banner_subTitle} 
+          cssClass=""
+          mainTitleClassess="fs-6 my-3"
+          subTitleClassess=""
+          />
         ) : (
           ""
         )}

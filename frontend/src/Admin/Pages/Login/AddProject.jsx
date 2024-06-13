@@ -377,7 +377,9 @@ const AddProject = () => {
         <div className="text-end d-flex justify-content-between align-items-center flex-column flex-md-row">
           <Title
             title={`${id ? "Edit Project" : "Add Project"}`}
-            cssClass="text-center blue-500 fs-4 mb-3 mb-md-0"
+            cssClass=""
+            mainTitleClassess="text-center blue-500 fs-4 mb-3 mb-md-0"
+            subTitleClassess=""
           />
           <div className="d-flex gap-1 justify-content-center align-items-center">
             <Button

@@ -54,12 +54,18 @@ const Banner = ({
           }
         >
           {bannerdata.banner_title && (
-            <Title title={bannerdata.banner_title} cssClass={bannerTitleCss} />
+            <Title title={bannerdata.banner_title} 
+            cssClass={bannerTitleCss} 
+            mainTitleClassess=""
+            subTitleClassess=""
+            />
           )}
           {bannerdata.banner_subTitle && (
             <Title
               title={bannerdata.banner_subTitle}
               cssClass={bannerSubTitleCss}
+              mainTitleClassess=""
+              subTitleClassess=""
             />
           )}
           {bannerdata.banner_descripiton && (

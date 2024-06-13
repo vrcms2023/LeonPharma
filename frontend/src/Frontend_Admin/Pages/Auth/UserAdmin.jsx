@@ -93,14 +93,11 @@ const UserAdmin = () => {
     <div className="container-fluid pt-5">
       <div className="row px-3 px-lg-5">
         <div className="text-end d-flex justify-content-between">
-          <Title title={"User's"} cssClass="fs-1 pageTitle" />
-          {/* <Search
-              setObject={userDetails}
-              clientSearchURL={""}
-              adminSearchURL={""}
-              clientDefaultURL={""}
-              searchfiledDeatails={"Name / Email ID / Admin Type "}
-            /> */}
+          <Title title={"User's"} cssClass="pageTitle" 
+          mainTitleClassess="fs-1"
+          subTitleClassess=""
+          />
+         
         </div>
       </div>
 

@@ -191,7 +191,9 @@ export const AdminNews = () => {
         <div className="text-end d-flex justify-content-between">
           <Title
             title={"News And Update"}
-            cssClass="text-center blue-500 fs-4"
+            cssClass=""
+            mainTitleClassess="text-center blue-500 fs-4"
+            subTitleClassess=""
           />
           <Button
             type="submit"

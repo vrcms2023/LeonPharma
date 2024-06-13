@@ -4,15 +4,23 @@ import Title from "../../../Common/Title";
 const Amenities = () => {
   return (
     <>
-      <Title title="Amenties" cssClass="fw-normal fs-1" />
+      <Title title="Amenties" 
+      cssClass=""
+      mainTitleClassess="fw-medium fs-1 "
+      subTitleClassess=""
+      />
       <Title
         title="Move into a home that will reflect your lifestyle"
-        cssClass="fw-normal fs-5 text-dark"
+        cssClass=""
+        mainTitleClassess="fw-medium fs-5 text-dark"
+        subTitleClassess=""
       />
       <hr />
       <Title
         title="2BHK/3BHK Gated Community HPR Lakefront@ HAFEEZPET"
-        cssClass="fw-normal fs-2 my-5 text-white text-center text-dark"
+        cssClass=""
+        mainTitleClassess="fw-medium fs-2 my-5 text-white text-center text-dark"
+        subTitleClassess=""
       />
       <hr />
       <div className="d-flex justify-content-between align-items-center pt-4">

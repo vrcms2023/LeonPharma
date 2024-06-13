@@ -28,7 +28,11 @@ export const SimpleTitleDescComponent = ({
 
   return (
     <>
-      <Title title={formvalues?.intro_title} cssClass="fs-5 fw-medium mb-2" />
+      <Title title={formvalues?.intro_title} 
+      cssClass=""
+      mainTitleClassess="fs-5 fw-medium mb-2"
+      subTitleClassess=""
+      />
       <p>{formvalues?.intro_desc}</p>
       {formvalues?.intro_morelink && (
         <Link to={formvalues?.intro_morelink} className="btn btn-outline mt-3">

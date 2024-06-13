@@ -134,7 +134,11 @@ const NewsAndUpdates = () => {
 
         <div className="row mb-4 py-4">
           <div className="col-md-6">
-            <Title title="News And Updates" cssClass="fs-1 pageTitle" />
+            <Title title="News And Updates" 
+            cssClass="pageTitle"
+            mainTitleClassess="fs-1"
+            subTitleClassess=""
+            />
           </div>
           <div className="col-md-6">
             <Search
