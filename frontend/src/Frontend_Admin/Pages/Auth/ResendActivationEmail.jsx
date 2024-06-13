@@ -61,7 +61,9 @@ const ResendActivationEmail = () => {
                 )}
                 <Title
                   title="Resend Activation Email"
-                  cssClass="text-center text-dark mb-4 fw-bold fs-4"
+                  mainTitleClassess="text-center text-dark mb-4 fw-bold fs-4"
+                  cssClass="" 
+                  subTitleClassess=""
                 />
                 {success ? (
                   <>

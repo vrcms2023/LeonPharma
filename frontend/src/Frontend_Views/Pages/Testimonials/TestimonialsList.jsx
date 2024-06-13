@@ -221,7 +221,12 @@ const TestimonialsList = () => {
         </div>
         <div className="row">
           <div className="col-md-6 fs-3 mt-4 mt-md-0">
-            <Title title="Testimonials" cssClass="fs-1 pageTitle" />
+            <Title title="Testimonials"
+            subTitle = ""
+            cssClass="pageTitle"
+            mainTitleClassess="fs-1"
+            subTitleClassess=""
+            />
           </div>
 
           <div className="col-md-6">
@@ -309,7 +314,10 @@ const TestimonialsList = () => {
                       {item.testimonial_title ? (
                         <Title
                           title={item.testimonial_title}
-                          cssClass="fs-1 fw-bold mb-1"
+                          subTitle = ""
+                          cssClass=""
+                          mainTitleClassess="fs-1 fw-medium mb-1"
+                          subTitleClassess=""
                         />
                       ) : (
                         ""

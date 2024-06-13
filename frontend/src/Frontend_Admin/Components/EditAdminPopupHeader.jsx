@@ -10,7 +10,9 @@ const EditAdminPopupHeader = ({ closeHandler, title, type }) => {
       <h6 className="px-3 fw-normal text-warning m-0 ">
         <Title
           title={title}
-          cssClass="text-black fs-5 fw-bold"
+          cssClass=""
+          mainTitleClassess="text-black fs-5 fw-medium"
+          subTitleClassess=""
           // subTitle={type === "add" ? "Add Mode " : "Edit Mode"}
         />
       </h6>

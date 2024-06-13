@@ -39,7 +39,9 @@ const AboutSection = ({ getBannerAPIURL, bannerState }) => {
           title={
             bannerdata?.banner_title ? bannerdata?.banner_title : "Update Title"
           }
-          cssClass="text-dark fs-4 fw-bold"
+          cssClass=""
+          mainTitleClassess="text-dark fs-4 fw-medium"
+          subTitleClassess=""
         />
         <div
           dangerouslySetInnerHTML={{

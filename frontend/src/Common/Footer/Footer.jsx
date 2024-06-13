@@ -128,80 +128,19 @@ const Footer = () => {
           <hr className="d-block d-md-none my-4" />
           <div className="row py-4 py-md-4">
             <div className="col-md-3 text-center text-md-start">
-              {/* <Title title="Company" /> */}
+             
               
               <ul className="">
                 {menuList?.map((menu) => {
                   return <ChildMenuContent menu={menu} key={menu.id} />;
                 })}
 
-                {/* <li>
-                  <Link to="/" className="ms-0">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/about">About Us</Link>
-                </li>
-                <li>
-                  <Link
-                    to={`/services/${urlStringFormat(
-                      getCookie("pageLoadServiceName")
-                    )}/`}
-                  >
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/careers">Careers</Link>
-                </li>
-                <li>
-                  <Link to="/news">News & Updates</Link>
-                </li>
-                <li>
-                  <Link to="/contact">Contact Us</Link>
-                </li> */}
-                {/* <li>
-                  <Link to="" onClick={showModel}>
-                    Privacy Policy
-                  </Link>
-                </li> */}
+                
               </ul>
             </div>
             <hr className="d-block d-md-none my-4" />
 
-            {/* <div 
-              className={`col-md-3 text-center text-md-start ${
-                isAdmin
-                  ? "border border-warning mb-3 position-relative"
-                  : ""
-              }`}
-            >
-               {isAdmin && (
-                  <Ancher 
-                    Ancherpath="/contact"
-                    AncherClass="btn btn-warning float-end"
-                    handleModel=""
-                    AncherLabel="Edit"
-                    icon=""
-                    // icon="fa-arrow-right"
-                    iconCss="ms-2 m-auto"
-                  />
-                )}
-              {address && (
-                <>
-                  <Title title="Address"  />
-
-                  <p className="m-0 fw-bold">{address.company_name}</p>
-                  <p className="m-0">{address.address_dr_no}</p>
-                  <p className="m-0">{address.street} </p>
-                  <p className="m-0">{address.location} </p>
-                  <p className="m-0">{address.city} </p>
-                  <p className="m-0">{address.state}</p>
-                  <p className="mb-4">{address.location_title}</p>
-                </>
-              )}              
-            </div> */}
+            
 
              <div 
               className={`col-md-4 col-lg-5 text-center text-md-start reachUs ${
@@ -211,17 +150,7 @@ const Footer = () => {
                   : ""
               }`}
             >
-              {/* {isAdmin && (
-                  <Ancher 
-                    Ancherpath="/contact"
-                    AncherClass="btn btn-warning float-end"
-                    handleModel=""
-                    AncherLabel="Edit"
-                    icon=""
-                    iconCss="ms-2 m-auto"
-                  />
-                )} */}
-              {/* <Title title="Reach Us"  /> */}
+             
               {address.phonen_number ? (
                 <p className="m-0 pb-3">
                   <i
@@ -307,13 +236,6 @@ const Footer = () => {
                       : ""
                   }`}
               >
-{/*                 
-                <Title title="Social Media" />
-                <img
-                  src={Logo}
-                  alt="SAP Design Studio"
-                  className="footerLogo"
-                /> */}
                 <div className="socialLinks">
                   
                   {isAdmin && (

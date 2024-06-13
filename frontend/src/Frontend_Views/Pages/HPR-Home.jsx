@@ -50,7 +50,9 @@ const Home = () => {
         <div className="col-md-8 offset-md-2 px-4 py-2 py-md-4">
           <Title
             title="To excel in delivery of work!"
-            cssClass="mb-2 fw-normal fs-2 text-center green-700"
+            mainTitleClassess="mb-2 fw-medium fs-2 text-center green-700"
+            cssClass="" 
+            subTitleClassess=""
           />
           <p className="text-center lh-md m-0">
             We believe that construction is a man made wonder. The thought of
@@ -73,7 +75,11 @@ const Home = () => {
                     alt="Ongoing Projects"
                   />
                   <div className="card-body">
-                    <Title title="Working Projects" cssClass="blue-900" />
+                    <Title title="Working Projects" 
+                    mainTitleClassess="blue-700"
+                    cssClass="" 
+                    subTitleClassess=""
+                    />
                     <p className="card-text mb-4">
                       We believe that construction is a man made wonder. The
                       thought of bringing imagination to real life structures
@@ -109,7 +115,9 @@ const Home = () => {
                   <div className="card-body">
                     <Title
                       title="Future Projects"
-                      cssClass="text-white blue-900"
+                      mainTitleClassess="text-white blue-900"
+                      cssClass="" 
+                      subTitleClassess=""
                     />
                     <p className="card-text mb-4">
                       We believe that construction is a man made wonder. The
@@ -144,7 +152,11 @@ const Home = () => {
                     alt="Future Projects"
                   />
                   <div className="card-body">
-                    <Title title="Completed Projects" cssClass="blue-900" />
+                    <Title title="Completed Projects" 
+                    mainTitleClassess="blue-900"
+                    cssClass="" 
+                    subTitleClassess=""
+                    />
                     <p className="card-text mb-4">
                       We believe that construction is a man made wonder. The
                       thought of bringing imagination to real life structures
@@ -178,11 +190,15 @@ const Home = () => {
         <div className="col-md-6 ourCulture">
           <Title
             title="Our Culture"
-            cssClass="mb-2 fw-normal text-center text-white title"
+            mainTitleClassess="mb-2 fw-medium text-center text-white title"
+            cssClass="" 
+            subTitleClassess=""
           />
           <Title
             title="Compassion, Innovation, Trust"
-            cssClass="mb-2 fw-normal fs-5 text-center text-black subTitle"
+            mainTitleClassess="mb-2 fw-medium fs-5 text-center text-black"
+            cssClass="subTitle" 
+            subTitleClassess=""
           />
           <p className="text-center text-white lh-md ">
             In our company, we attain to serve you as best as we can in a timely
@@ -197,7 +213,9 @@ const Home = () => {
             <div className="col-8 col-md-6 p-4 d-flex justify-content-center align-items-start flex-column borderBottom">
               <Title
                 title="Professional Service"
-                cssClass="mb-2 fw-bold title gray-444"
+                mainTitleClassess="mb-2 fw-bold title gray-444"
+                cssClass="" 
+                subTitleClassess=""
               />
               <p className="lh-md gray-222">
                 ‘Best in class’ service ensured with our experienced in-house
@@ -211,7 +229,9 @@ const Home = () => {
             <div className="col-8 col-md-6 p-4 d-flex justify-content-center align-items-start flex-column borderBottom">
               <Title
                 title="Quality Assurance"
-                cssClass="mb-2 fw-bold title gray-444"
+                mainTitleClassess="mb-2 fw-medium title gray-444"
+                cssClass="" 
+                subTitleClassess=""
               />
               <p className="lh-md gray-222">
                 Be ensured with us that you have the ‘right quality for the
@@ -227,7 +247,9 @@ const Home = () => {
             <div className="col-8 col-md-6 p-4 d-flex justify-content-center align-items-start flex-column borderBottom">
               <Title
                 title="100% transparency"
-                cssClass="mb-2 fw-bold title gray-444"
+                mainTitleClassess="mb-2 fw-medium  gray-444"
+                cssClass="title" 
+                subTitleClassess=""
               />
               <p className="lh-md gray-222">
                 No Hidden Charges, Every detail is as clear as a crystal. To
@@ -240,7 +262,9 @@ const Home = () => {
             <div className="col-8 col-md-6 p-4 d-flex justify-content-center align-items-start flex-column borderBottom">
               <Title
                 title="Insured Work"
-                cssClass="mb-2 fw-bold title gray-444"
+                mainTitleClassess="mb-2 fw-medium gray-444"
+                cssClass="title" 
+                subTitleClassess=""
               />
               <p className="lh-md gray-222">
                 Your Structure is insured with us. Any issue- post construction,
@@ -252,43 +276,6 @@ const Home = () => {
         </div>
         {/* <Testimonials testimonis={testimonis} /> */}
       </div>
-      {/* <div className='row shadow-lg' style={{margin: "70px"}}>
-        <div className='col-md-7' style={{background: "url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'"}}></div>
-        <div className='col-md-5 p-5 bg-light'>
-            <div className='mx-5 py-5'>
-                <Title title="Let your thoughts fly high" cssClass="mb-4 fw-normal fs-2" />
-                <p className='lh-lg fs-5'>
-                We believe that construction is a manmade wonder. The thought of bringing imagination to real life structures excites us, each day the passion in us grows as we contribute to this industry. It gives us ample satisfaction that we are contributing to your happiness, your lifetime dream and our country’s growth/development.</p>
-                <Link  to='/' className="btn btn-outline-secondary">Read More...</Link >
-            </div>
-        </div>
-    </div> */}
-
-      {/* <div className='row bg-dark'>
-        <div className='col-md-5 p-5'>
-            <div className='mx-5 py-5'>
-                <Title title="Our Culture" cssClass="mb-4 fw-normal fs-2 text-white" />
-                <p className='text-secondary'>Compassion, Innovation, Trust</p>
-                <p className='lh-lg fs-5 text-secondary'>
-                    In our company, we attain to serve you as best as we can in a timely fashion and with assurance that your needs will be satisfied.From initial site studies, to design, to construction and commissioning, we stand by our clients as technical experts throughout the development cycle. We collaborate with planners, architects, consultants, program managers and construction managers to deliver high-performance buildings, infrastructure and communities.</p>
-                    <Link  to='/' className="btn btn-outline-light">Read More...</Link >
-            </div>
-        </div>
-        <div className='col-md-7' style={{background: "url('https://images.unsplash.com/photo-1556912173-3bb406ef7e77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')"}}></div>
-    </div> */}
-
-      {/* <div className='row shadow-lg' style={{margin: "70px"}}>
-    <div className='col-md-7' style={{background: "url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'"}}></div>
-        <div className='col-md-5 p-5 bg-light'>
-            <div className='mx-5 py-5'>
-            <Title title="Ongoing Projects" />
-            <p>Experience Our Difference Firsthand</p>
-            <p className='lh-lg fs-5'>
-                Custom homebuilding is the sure way to get exactly what your family needs. No modifications. No compromises. No settling for something less. With decades of custom homebuilding experience and a commitment to excellence and innovation in home designs, there is no better way to experience the HPR Homes difference than to explore one of our custom built model homes. Our network of fully-furnished luxury models are available to tour seven days a week.</p>
-                <Link  to='/' className="btn btn-outline-secondary">Read More...</Link >
-            </div>
-        </div>
-        </div> */}
     </div>
   );
 };

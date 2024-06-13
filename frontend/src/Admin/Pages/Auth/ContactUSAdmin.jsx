@@ -50,7 +50,12 @@ const ContactUSAdmin = () => {
       </div>
       <div className="row px-3 px-lg-5">
         <div className="col-md-6">
-          <Title title={"Contact list"} cssClass="fs-1 pageTitle" />
+          <Title 
+          title={"Contact list"} 
+          cssClass="pageTitle" 
+          mainTitleClassess="fs-1"
+          subTitleClassess=""
+          />
         </div>
         <div className="col-md-6">
           <Search

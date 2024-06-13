@@ -338,7 +338,12 @@ const FileUpload = ({
         <div className={`${scrollEnable ? "heightCtrl" : "fullHeightCtrl"}`}>
           <div className="mb-2 row">
             <label className="col-sm-12 col-form-label">
-              <Title title={title} cssClass="requiredField" />
+              <Title 
+              title={title} 
+              cssClass="requiredField" 
+              mainTitleClassess=""
+              subTitleClassess=""
+              />
             </label>
             <div className="col-sm-12">
               {error ? <Error>{error}</Error> : ""}

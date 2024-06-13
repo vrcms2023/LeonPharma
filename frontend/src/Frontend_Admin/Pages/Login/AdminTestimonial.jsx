@@ -207,7 +207,11 @@ export const AdminTestimonial = () => {
     <div className="container-fluid pt-5" style={{ marginTop: "120px" }}>
       <div className="row px-3 px-md-3">
         <div className="text-end d-flex justify-content-between">
-          <Title title={"Testimonial"} cssClass="text-center blue-500 fs-4" />
+          <Title title={"Testimonial"} 
+          cssClass=""
+          mainTitleClassess="text-center blue-500 fs-4"
+          subTitleClassess=""
+          />
           <Button
             type="submit"
             cssClass="btn btn-secondary"

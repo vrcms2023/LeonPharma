@@ -185,7 +185,12 @@ const AddService = ({
 
   return (
     <div className="pb-5 border border-1 border-secondary">
-      <Title title="Create New Service Page" cssClass="p-3 fs-6 text-dark" />
+      <Title 
+      title="Create New Service Page" 
+      cssClass="" 
+      mainTitleClassess="p-3 fs-6 text-dark"
+      subTitleClassess=""
+      />
       <hr className="m-0 mb-3" />
       {/* <h3 className={`text-center ${selectedServiceProject && selectedServiceProject.publish ? 'border border-success' : ''} `}>Add New Service </h3> */}
 
@@ -224,7 +229,7 @@ const AddService = ({
           </div>
 
           <div className="col-md-12 servicePageLinks">
-            {/* <Title title="Pages" cssClass="fs-6 fw-bold text-center border-bottom pb-2 mb-2 " /> */}
+           
             <ul>
               {serviceList &&
                 serviceList.map((item) => (

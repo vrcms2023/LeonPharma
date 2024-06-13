@@ -113,7 +113,9 @@ export const BriefIntroAdmin = ({ editHandler, componentType, pageType }) => {
           <>
             <Title
               title="Saved Successfully"
-              cssClass="text-white text-center bg-success py-2"
+              cssClass=""
+              mainTitleClassess="text-white text-center bg-success py-2"
+              subTitleClassess=""
             />
           </>
         ) : (

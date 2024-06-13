@@ -201,7 +201,11 @@ const ClientsList = () => {
 
         <div className="row">
           <div className="col-md-6 fs-3 mt-4 mt-md-0">
-            <Title title="Clients" cssClass="fs-1 pageTitle" />
+            <Title title="Clients"
+              cssClass="pageTitle"
+              mainTitleClassess="fs-1"
+              subTitleClassess=""
+            />
           </div>
 
           <div className="col-md-6">

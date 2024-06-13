@@ -4,7 +4,6 @@ import Title from "../../Common/Title";
 const Location = () => {
   return (
     <>
-      {/* <Title title="Location" cssClass="fw-normal fs-1 pt-5"/> */}
       <iframe
         title="LocationTitle"
         className="googlemap"

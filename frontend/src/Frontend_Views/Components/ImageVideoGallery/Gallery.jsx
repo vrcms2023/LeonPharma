@@ -110,7 +110,11 @@ const Gallery = () => {
       <div className="container-fluid">
         <div className="row mb-4 px-5 py-4">
           <div className="col-md-6 fs-3 mt-4 mt-md-0">
-            <Title title="Image Gallery" cssClass="fs-1 pageTitle" />
+            <Title title="Image Gallery" 
+            cssClass="pageTitle"
+            mainTitleClassess="fs-1"
+            subTitleClassess=""
+            />
           </div>
 
           <div className="col-md-6 mb-4">
@@ -133,26 +137,7 @@ const Gallery = () => {
           {imageGallery?.map((item, index) => (
             <GalleryImage image={item} key={index} />
           ))}
-          {/* <div className="col-md-3 mb-3">
-            
-            <img src='https://images.unsplash.com/photo-1682686579976-879b74d6d7ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8' className='w-100' />
-            <h6><Title title="Image Title"/></h6>
-          </div>
-
-          <div className="col-md-3 mb-3">
-            <img src='https://images.unsplash.com/photo-1682686579976-879b74d6d7ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8' className='w-100' />
-            <h6><Title title="Image Title"/></h6>
-          </div>
-
-          <div className="col-md-3 mb-3">
-            <img src='https://images.unsplash.com/photo-1682686579976-879b74d6d7ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8' className='w-100' />
-            <h6><Title title="Image Title"/></h6>
-          </div>
-
-          <div className="col-md-3 mb-3">
-            <img src='https://images.unsplash.com/photo-1682686579976-879b74d6d7ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8' className='w-100' />
-            <h6><Title title="Image Title"/></h6>
-          </div> */}
+          
         </div>
       </div>
     </>

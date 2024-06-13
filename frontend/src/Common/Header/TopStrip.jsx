@@ -39,7 +39,9 @@ const TopStrip = () => {
           <div className="d-none d-md-flex">
             <Title
               title="Welcome to SAP Design Studio"
-              cssClass={"fs-6 fw-normal"}
+              cssClass=""
+              mainTitleClassess="fs-6 fw-medium"
+              subTitleClassess=""
             />
           </div>
           <div className="d-flex justify-content-between gap-4 quickContact">

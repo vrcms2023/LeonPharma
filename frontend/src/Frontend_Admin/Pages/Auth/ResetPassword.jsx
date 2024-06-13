@@ -53,7 +53,9 @@ const ResetPassword = () => {
                 
                 <Title
                   title="Reset Password"
-                  cssClass="text-center text-dark mb-4 fw-medium fs-4"
+                  mainTitleClassess="text-center text-dark mb-4 fw-medium fs-4"
+                  cssClass="" 
+                  subTitleClassess=""
                 />
                 {success ? (
                   <div>Email sent to your resgister email id please check</div>

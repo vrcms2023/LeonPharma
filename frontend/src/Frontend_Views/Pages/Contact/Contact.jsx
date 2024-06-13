@@ -222,7 +222,9 @@ const Contact = () => {
                     >
                     <Title
                       title={item.location_title}
-                      cssClass="mb-2 fs-4 text-black"
+                      cssClass=""
+                      mainTitleClassess="mb-2 fs-4 text-black"
+                      subTitleClassess=""
                     />
                     <div className="mb-2 contactAddress" key={index}>
                       <p className="m-0 fw-medium">{item.company_name}</p>
@@ -235,7 +237,7 @@ const Contact = () => {
                       <p className="mt-2">
                         {item.phonen_number && (
                           <>
-                            {/* <Title title="Phone Number :" cssClass="mb-2" /> */}
+                           
                             <i
                               className="fa fa-phone-square fs-4 me-2"
                               aria-hidden="true"
@@ -247,7 +249,7 @@ const Contact = () => {
                       <p className="mt-2">
                         {item.phonen_number_2 && (
                           <>
-                            {/* <Title title="Phone Number :" cssClass="mb-2" /> */}
+                           
                             <i
                               className="fa fa-phone-square fs-4 me-2"
                               aria-hidden="true"
@@ -316,22 +318,6 @@ const Contact = () => {
         </div>
 
         <div className="row">
-          {/* <div className="col-md-12 text-center py-0 py-md-4">
-            <Title
-              title="Quick contact"
-              cssClass="fs-3 text-center fw-medium mb-2 pt-5"
-            />
-          </div> */}
-          {/* <div className="col-md-5 contact mb-5">
-            {success && (
-              <Alert
-                mesg={"Thank you for contact us"}
-                cssClass={`alert text-white w-50 mx-auto mt-3 p-2 text-center bg-success`}
-              />
-            )}
-
-            <ContactForm />
-          </div> */}
           <div className="col-md-12 position-relative mb-5">
             {isAdmin && hasPermission && (
               <EditIcon editHandler={() => editHandler("map", true)} />

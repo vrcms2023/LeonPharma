@@ -7,7 +7,12 @@ const GalleryImage = ({image}) => {
   return (
     <div className="col-md-3 mb-3">
           <img src={url} className='w-100' />
-          <h6><Title title={title} /></h6>
+          <Title title={title} 
+          cssClass="pageTitle"
+          mainTitleClassess="fs-6 text-dark"
+          subTitleClassess=""
+          />
+          
         </div>
   )
 }

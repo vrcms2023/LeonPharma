@@ -43,8 +43,18 @@ const HomeTab = ({ project, thumbImgs, pdfs }) => {
   return (
     <>
       <div className="py-5">
-        <Title title={aboutstitle} cssClass="" />
-        <Title title={aboutussubtitle} cssClass="fs-6 text-dark" />
+        <Title title={aboutstitle} 
+        cssClass="pageTitle"
+        mainTitleClassess=""
+        subTitleClassess=""
+        />
+
+        <Title title={aboutussubtitle} 
+        cssClass="pageTitle"
+        mainTitleClassess="fs-6 text-dark"
+        subTitleClassess=""
+        />
+        
         <div className="py-3">{description}</div>
         <p className="text-end">
           {pdfs.length > 0

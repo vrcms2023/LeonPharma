@@ -74,7 +74,9 @@ const HomeServices = ({ title }) => {
             <div className="col-md-6 p-2 p-md-4 homeServiceDetails">
               <Title
                 title={item.feature_title}
-                cssClass="fw-bold serviceTitle"
+                cssClass="serviceTitle"
+                mainTitleClassess="fw-medium"
+                subTitleClassess=""
               />
               {item.feature_description ? (
                 <div

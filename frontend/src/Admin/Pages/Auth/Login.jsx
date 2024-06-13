@@ -111,7 +111,9 @@ const Login = () => {
             />
             <Title
               title="Admin login"
-              cssClass="text-center text-dark mb-4 fw-bold fs-4"
+              cssClass=""
+              mainTitleClassess="text-center text-dark mb-4 fw-medium fs-4"
+              subTitleClassess=""
             />
             <div className="mb-3">
               <label

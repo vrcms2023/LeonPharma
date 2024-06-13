@@ -119,10 +119,7 @@ const Login = () => {
               name="csrfmiddlewaretoken"
               value="m6pDnuW9RPTEuK66x0H4oc09JSfyv6bD"
             />
-            {/* <Title
-              title="login"
-              cssClass="text-center text-dark mb-4 fw-medium fs-4"
-            /> */}
+           
             <div className="mb-3">
               <label
                 htmlFor="userName"

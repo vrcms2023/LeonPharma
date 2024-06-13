@@ -42,14 +42,14 @@ export const TeamStyled = styled.div`
       color: ${({ theme }) => theme.teamTextColor};
 
       .strengths {
-        p:before {
-          content: "»  ";
-          font-size: 25px;
-        }
-        p{
-          margin-left: 10px;
-          margin-bottom: 0px;
-      }
+        // p:before {
+        //   content: "»  ";
+        //   font-size: 25px;
+        // }
+      //   p{
+      //     margin-left: 10px;
+      //     margin-bottom: 0px;
+      // }
       }
     }
   }

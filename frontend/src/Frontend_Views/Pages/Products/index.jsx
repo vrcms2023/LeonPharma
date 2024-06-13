@@ -181,7 +181,11 @@ const ProductsPage = () => {
           <div className="row ">
             <div className="col-md-12 d-flex justify-content-end align-items-center gap-2">
               <span>
-                <Title title="CATEGORY - " cssClass={"fw-medium fs-6"} />
+                <Title title="CATEGORY - "
+                cssClass=""
+                mainTitleClassess="fw-medium fs-6"
+                subTitleClassess=""
+                />
               </span>
               <Button
                 type="button"
@@ -285,7 +289,10 @@ const ProductsPage = () => {
             <div className="col-md-12 col-lg-6 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0 align-items-center">
               <Title
                 title={`CATEGORY -> ${selectedCategory?.category_name}`}
-                cssClass={"fw-medium fs-4"}
+                cssClass=""
+                mainTitleClassess="fw-medium fs-4"
+                subTitleClassess=""
+
               />{" "}
             </div>
             <div className="col-md-12 col-lg-6 d-flex flex-column flex-sm-row justify-content-end align-items-center gap-3">

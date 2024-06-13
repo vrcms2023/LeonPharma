@@ -40,7 +40,11 @@ const ContactForm = ({ categoryId }) => {
 
   return (
     <>
-    <Title title="Contact Information" cssClass="formTitle fs-4 fw-medium mb-4" />
+    <Title title="Contact Information" 
+    cssClass="formTitle" 
+    mainTitleClassess="fs-4 fw-medium mb-4"
+    subTitleClassess=""
+    />
     <form
       className="my-0 mx-auto contactForm"
       onSubmit={handleSubmit(onFormSubmit)}

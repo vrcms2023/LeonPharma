@@ -247,7 +247,10 @@ const UserPagePermission = () => {
     <div className="container-fluid pt-5">
       <div className="row px-3 px-lg-5">
         <div className="text-end d-flex justify-content-between align-items-center">
-          <Title title={"User's page Permission"} cssClass="fs-1 pageTitle" />
+          <Title title={"User's page Permission"} mainTitleClassess="fs-1 pageTitle"
+          cssClass=""
+          subTitleClassess=""
+          />
           <Button
             type="submit"
             cssClass="btn btn-primary"

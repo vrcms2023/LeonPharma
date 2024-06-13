@@ -151,7 +151,9 @@ const Client = ({ item, index, editHandler, deleteAboutSection }) => {
                 {item.client_title && (
                   <Title
                     title={item.client_title}
-                    cssClass="fs-5 mb-2 text-center"
+                    cssClass=""
+                    mainTitleClassess="fs-5 mb-2 text-center"
+                    subTitleClassess=""
                   />
                 )}
 

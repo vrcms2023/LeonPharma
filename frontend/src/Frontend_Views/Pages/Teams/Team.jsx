@@ -238,7 +238,12 @@ const Team = () => {
 
         <div className="row mb-0 mb-md-4 py-2 py-md-4">
           <div className="col-md-6 fs-3 mt-4 mt-md-0">
-            <Title title="Our Team" cssClass="fs-1 pageTitle" />
+            <Title title="Our Team" 
+            subTitle = ""
+            cssClass="pageTitle"
+            mainTitleClassess="fs-1"
+            subTitleClassess=""
+            />
           </div>
 
           <div className="col-md-6 mb-4">
@@ -394,18 +399,23 @@ const TeamItem = ({ item, index, deleteAboutSection, editHandler }) => {
               )}
 
               {item.team_member_name && (
-                <Title title={item.team_member_name} cssClass="fs-4 title " />
+                <Title title={item.team_member_name} 
+                subTitle = ""
+                cssClass="title"
+                mainTitleClassess="fs-4"
+                subTitleClassess=""
+                />
               )}
 
               <div
-                className="strengths my-3"
+                className="strengths mt-2 mb-3"
                 dangerouslySetInnerHTML={{
                   __html: item.team_member_about_us,
                 }}
               />
 
-              {item.team_member_phone_number ||
-                (item.team_member_email && <hr />)}
+              {/* {item.team_member_phone_number ||
+                (item.team_member_email && <hr />)} */}
 
               {item.team_member_email && (
                 <div className="mb-2">

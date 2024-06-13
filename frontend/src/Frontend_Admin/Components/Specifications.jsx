@@ -85,7 +85,11 @@ const Specifications = ({
   return (
     <div>
       <div className="d-flex justify-content-between align-items-center">
-        <Title title={title} cssClass="fs-5 fw-bold" />
+        <Title title={title} 
+        cssClass=""
+        mainTitleClassess="fs-5 fw-medium"
+        subTitleClassess=""
+        />
         {specifications.length > 0 && (
           <Button
             type="submit"

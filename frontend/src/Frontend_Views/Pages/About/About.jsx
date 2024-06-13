@@ -181,9 +181,7 @@ const About = () => {
       <AboutPageStyled>
         <div className="container-fluid container-lg my-md-5 ">
           <div className="row my-3 d-flex align-items-center">
-            {/* <div className="col-md-6 fs-3 mt-4 mt-md-0">
-              <Title title="About Us" cssClass="fs-1 pageTitle" />
-            </div> */}
+            
             {isAdmin && hasPermission && (
               <>
               <div className="col-6">
@@ -261,7 +259,9 @@ const About = () => {
                       {item.aboutus_title ? (
                         <Title
                           title={item.aboutus_title}
-                          cssClass="fs-2 mb-2 fw-medium title"
+                          cssClass=""
+                          mainTitleClassess="fs-2 mb-2 fw-medium title"
+                          subTitleClassess=""
                         />
                       ) : (
                         ""
@@ -270,7 +270,9 @@ const About = () => {
                       {item.aboutus_sub_title ? (
                         <Title
                         title={item.aboutus_sub_title}
-                          cssClass="fs-5 text-secondary mb-2"
+                          cssClass=""
+                          mainTitleClassess="fs-5 text-secondary mb-2"
+                          subTitleClassess=""
                         />
                       ) : (
                         ""
@@ -279,7 +281,9 @@ const About = () => {
                       {item.aboutus_sub_title ? (
                         <Title
                           title={item.aboutus_sub_title}
-                          cssClass="fs-5 text-secondary mb-2"
+                          cssClass=""
+                          mainTitleClassess="fs-5 text-secondary mb-2"
+                          subTitleClassess=""
                         />
                       ) : (
                         ""
@@ -293,10 +297,7 @@ const About = () => {
                     </div>
 
                     <div className="col-lg-5 p-1 p-lg-5 pe-lg-0 d-flex justify-content-center align-items-start flex-column rightColumn">
-                      {/* <Title
-                          title={"OUR WORK LOCATIONS"}
-                          cssClass="fs-5 my-5 title"
-                        /> */}
+                      
                       <img
                         src={getImagePath(item.path)}
                         alt=""
@@ -304,7 +305,7 @@ const About = () => {
                       />
                     </div>
                   </div>
-                  {/* <hr className="border-white" /> */}
+                  
                 </>
               ))
             ) : (

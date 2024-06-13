@@ -58,7 +58,9 @@ const Activation = () => {
             >
               <Title
                 title="Verify your Account"
-                cssClass="text-center text-dark mb-4 fw-bold fs-4"
+                cssClass="" 
+                mainTitleClassess="text-center text-dark mb-4 fw-medium fs-4"
+                subTitleClassess=""
               />
               {verified ? (
                 <h5>
