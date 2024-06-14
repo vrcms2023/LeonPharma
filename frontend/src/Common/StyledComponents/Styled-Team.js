@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TeamStyled = styled.div`
-  background-color: ${({ theme }) => theme.transparent};
+  background-color: ${({ theme }) => theme.primaryColor};
 
   .editIcon {
     top: 10px;

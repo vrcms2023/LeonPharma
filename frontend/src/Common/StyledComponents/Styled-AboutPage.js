@@ -5,6 +5,7 @@ export const AboutPageStyled = styled.div`
     color: ${({ theme }) => theme.aboutPageTitleColor};
   }
   .aboutPage {
+    background-color: ${({ theme }) => theme.primaryColor};
     .row {
       border-bottom: 2px solid ${({ theme }) => theme.white};
 

@@ -466,8 +466,18 @@ const Home = () => {
                 ""
               )}
             </div>
+            <div className="d-flex justify-content-center align-items-center mt-4">
+                <Ancher
+                  AncherLabel="View All"
+                  Ancherpath="/testimonials"
+                  AncherClass="btn btn-outline d-flex justify-content-center align-items-center "
+                  AnchersvgColor="#17427C"
+                />
+              </div>
           </div>
         </TestimonialCarouselPageStyled>
+
+        
 
         {/* HOME News */}
         <div className="row py-5 homeNews">
@@ -487,7 +497,7 @@ const Home = () => {
 
               <div className="d-flex justify-content-center align-items-center mt-4">
                 <Ancher
-                  AncherLabel="Read more"
+                  AncherLabel="View All"
                   Ancherpath="/news"
                   AncherClass="btn btn-outline d-flex justify-content-center align-items-center "
                   AnchersvgColor="#17427C"

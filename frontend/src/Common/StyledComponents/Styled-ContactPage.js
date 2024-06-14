@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const ContactPageStyled = styled.div`
+background: ${({theme}) => theme.primaryColor};
   .contactPage {
+    
     .contactAddress {
       color: ${({ theme }) => theme.black};
   

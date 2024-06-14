@@ -241,7 +241,7 @@ const Team = () => {
             <Title title="Our Team" 
             subTitle = ""
             cssClass="pageTitle"
-            mainTitleClassess="fs-1"
+            mainTitleClassess="fs-3 fw-medium"
             subTitleClassess=""
             />
           </div>

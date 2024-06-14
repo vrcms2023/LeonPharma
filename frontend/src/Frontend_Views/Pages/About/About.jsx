@@ -260,7 +260,7 @@ const About = () => {
                         <Title
                           title={item.aboutus_title}
                           cssClass=""
-                          mainTitleClassess="fs-2 mb-2 fw-medium title"
+                          mainTitleClassess="fs-3 mb-2 fw-medium title"
                           subTitleClassess=""
                         />
                       ) : (

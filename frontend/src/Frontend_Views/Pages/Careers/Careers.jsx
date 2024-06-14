@@ -151,7 +151,7 @@ const Careers = () => {
               </div>
             </div>
 
-            <div className="row">
+            <div className="row careerItems">
               <JobPost
                 addJobs={componentEdit.addjob}
                 posts={posts}
