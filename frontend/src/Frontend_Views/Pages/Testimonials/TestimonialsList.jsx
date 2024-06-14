@@ -133,6 +133,7 @@ const TestimonialsList = () => {
     setModelItem(item)
     setShow(!show)
     setModelShow(!modelShow);
+    window.scrollTo(0, 0);
   };
 
   const closeModel = () => {
@@ -224,7 +225,7 @@ const TestimonialsList = () => {
             <Title title="Testimonials"
             subTitle = ""
             cssClass="pageTitle"
-            mainTitleClassess="fs-1"
+            mainTitleClassess="fs-3 fw-medium"
             subTitleClassess=""
             />
           </div>
@@ -316,7 +317,7 @@ const TestimonialsList = () => {
                           title={item.testimonial_title}
                           subTitle = ""
                           cssClass=""
-                          mainTitleClassess="fs-1 fw-medium mb-1"
+                          mainTitleClassess="fs-4 fw-medium mb-1"
                           subTitleClassess=""
                         />
                       ) : (

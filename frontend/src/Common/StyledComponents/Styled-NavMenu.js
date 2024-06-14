@@ -27,7 +27,7 @@ export const StyledMenu = styled.menu`
 
         .nav-Link {
           color:${({ theme }) => theme.black}; 
-          margin: 0 12px;
+          margin: 0 16px;
           text-decoration: none;
           font-size: 1.1rem;
           font-weight: 500;

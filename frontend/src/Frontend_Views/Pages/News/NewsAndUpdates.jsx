@@ -132,11 +132,11 @@ const NewsAndUpdates = () => {
           </div>
         )}
 
-        <div className="row mb-4 py-4">
+        <div className="row py-4">
           <div className="col-md-6">
             <Title title="News And Updates" 
             cssClass="pageTitle"
-            mainTitleClassess="fs-1"
+            mainTitleClassess="fs-2"
             subTitleClassess=""
             />
           </div>
@@ -157,7 +157,7 @@ const NewsAndUpdates = () => {
           <NoteComponent note="Use drag option to shuffle the Items" />
         )}
 
-        <div className="row mb-5">
+        <div className="row py-5 newsItems">
           {componentEdit.addNews ? (
             <div className="adminEditTestmonial">
               <AddEditAdminNews

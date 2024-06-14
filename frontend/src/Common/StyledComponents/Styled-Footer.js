@@ -3,10 +3,6 @@ import BgSymbol from "../../Images/logo-symbol.svg";
 import styled from "styled-components";
 
 export const FooterStyled = styled.div`
-  // background-image: url(${BgSymbol});
-  // background-repeat: no-repeat;
-  // background-position: 120% -250px;
-  // background-size: 40%;
   background: linear-gradient(360deg, ${({ theme }) => theme.white} 0%, ${({ theme }) => theme.primaryColor} 100%);
 
   .footerDetails {
@@ -65,6 +61,13 @@ export const FooterStyled = styled.div`
       font-size: 2rem;
       margin: 0 8px 0;
       color: ${({ theme }) => theme.secondaryColor};
+      transition: opacity 0.5s ease, transform 0.5s ease, border-radius 0.5s ease;
+
+
+      &:hover {
+        color: ${({ theme }) => theme.teritoryColor};
+        transform: scale(1.2) rotate(-5deg);
+      }
     }
 
     .socialMedia {
@@ -125,7 +128,7 @@ export const FooterStyled = styled.div`
       color: ${({ theme }) => theme.black};
       font-size: 0.8rem !important;
       &:hover {
-        color: ${({ theme }) => theme.footerLinkHoverColor};
+        color: ${({ theme }) => theme.secondaryColor};
       }
     }
 
@@ -133,6 +136,10 @@ export const FooterStyled = styled.div`
     .dby a {
       font-size: 0.85rem;
       color: ${({ theme }) => theme.secondaryColor};
+
+      &:hover {
+        color: ${({ theme }) => theme.teritoryColor};
+      }
     }
   }
 `;

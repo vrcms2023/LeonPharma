@@ -9,6 +9,12 @@ export const NewsStyled = styled.div`
     border-radius: 10px;
     overflow: hidden;
     border: 0px;
+    transition: opacity 0.5s ease, transform 0.5s ease, border-radius 0.5s ease;
+
+    &:hover {
+      transform: scale(1.1) rotate(-0deg);
+    }
+
 
     .title {
       color: ${({ theme }) => theme.newsCardTitleColor};
