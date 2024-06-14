@@ -86,6 +86,34 @@ const Careers = () => {
         />
       </div>
 
+      {/* Brief Introductions */}
+      <BriefIntroFrontend
+        introState={componentEdit.briefIntro}
+        linkCss="btn btn-outline d-flex justify-content-center align-items-center"
+        linkLabel="Read More"
+        moreLink=""
+        showLink={false}
+        introTitleCss = "fs-3 fw-medium"
+        introSubTitleCss = "fw-medium text-muted "
+        introDecTitleCss = "fs-6 fw-normal m-auto"
+        detailsContainerCss="col-md-12"
+        anchorContainer="d-flex justify-content-start align-items-start mt-3"
+        anchersvgColor="#17427C"
+        pageType={pageType}
+      />
+
+      {componentEdit.briefIntro ? (
+        <div className="adminEditTestmonial">
+          <AdminBriefIntro
+            editHandler={editHandler}
+            componentType="briefIntro"
+            pageType={pageType}
+          />
+        </div>
+      ) : (
+        ""
+      )}
+
       {componentEdit.banner ? (
         <div className="adminEditTestmonial">
           <ImageInputsForm
