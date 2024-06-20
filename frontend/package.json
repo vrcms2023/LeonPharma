@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@hello-pangea/dnd": "^16.6.0",
     "@popperjs/core": "^2.11.8",
     "@reduxjs/toolkit": "^2.2.4",
