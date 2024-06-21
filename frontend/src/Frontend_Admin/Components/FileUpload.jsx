@@ -444,6 +444,7 @@ const FileUpload = ({
                     value={value}
                     fieldName={fieldName}
                     register={register}
+                   {...showExtraFormFields[e]}
                   />
                 );
               }

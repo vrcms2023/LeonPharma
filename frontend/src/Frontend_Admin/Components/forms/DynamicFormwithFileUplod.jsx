@@ -178,12 +178,12 @@ export default function DynamicFormwithFileUplod({
                       aria-hidden="true"
                     ></i>
                   </Link>
-                  <Link to="" onClick={() => deleteFileHandler(editObject)}>
+                  {/* <Link to="" onClick={() => deleteFileHandler(editObject)}>
                     <i
                       class="fa fa-trash-o ms-2 fs-5 rounded-1 p-1 text-danger"
                       aria-hidden="true"
                     ></i>
-                  </Link>
+                  </Link> */}
                 </div>
               ) : (
                 ""
