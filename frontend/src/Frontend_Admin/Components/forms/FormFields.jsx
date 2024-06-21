@@ -20,7 +20,7 @@ export const InputFields = ({
             htmlFor=""
             className="col-sm-12 col-form-label text-capitalize"
           >
-            {label}
+            {label} {rest.isRequired && <span className="error">*</span>}
           </label>
           <div className="col-sm-12">
             <input

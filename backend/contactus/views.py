@@ -81,10 +81,10 @@ class ContactUSAPIView(generics.CreateAPIView):
                 file_name = serializer.data["category_name"]
                 category_fileuplod = serializer.data["category_fileuplod"]
 
-                if (category_fileuplod and category_fileuplod.strip()):
-                        fileURL = 'backend'+category_fileuplod
-        
-                        with open(fileURL, 'rb') as file:
+                if (category_fileuplod and category_fileuplod.strip()):                     
+                        full_path = os.path.join(settings.BASE_DIR, *category_fileuplod.split("/"))
+                       
+                        with open(full_path,'rb') as file:
                             file_content = file.read()
 
                             mime_type = magic.from_buffer(file_content, mime=True)
@@ -92,13 +92,7 @@ class ContactUSAPIView(generics.CreateAPIView):
 
             client_msg.content_subtype ="html"# Main content is now text/html
             client_msg.send()
-            
-            # send_mail(
-            #     'Thank you contact VRCMS ' + serializer.data["firstName"],
-            #     serializer.data["description"] + serializer.data["phoneNumber"],
-            #     serializer.data["email"], 
-            #     [settings.EMAIL_HOST_USER, serializer.data["email"], "designerkrishna@gmail.com"]
-            # )
+        
             return Response(status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

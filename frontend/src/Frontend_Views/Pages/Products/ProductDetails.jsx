@@ -98,7 +98,7 @@ const ProductDetails = () => {
                 ></div>
               </div>
             </div>
-            {products?.results.length <= 1 ? "" : <div className="col-lg-2 my-5 allProducts rightPositioned d-none d-lg-block position-fixed rounded shadow-lg">
+            {products?.results?.length <= 1 ? "" : <div className="col-lg-2 my-5 allProducts rightPositioned d-none d-lg-block position-fixed rounded shadow-lg">
               {products?.results?.map(
                 (item) =>
                   item.id !== id && (

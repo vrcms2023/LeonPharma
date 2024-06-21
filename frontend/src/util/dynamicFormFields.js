@@ -389,6 +389,7 @@ export const getProductFormDynamicFields = (selectedCategory) => {
       label: "Product Name",
       type: "text",
       fieldName: "product_name",
+      isRequired: true,
       validationObject: { required: "Please enter Product name" },
     },
     is_available: {
