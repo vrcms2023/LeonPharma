@@ -63,37 +63,37 @@ class ContactUSAPIView(generics.CreateAPIView):
             admin_msg.content_subtype ="html"# Main content is now text/html
             admin_msg.send()
             
-            # client_ctx = {
-            #     'user': serializer.data["firstName"], 
-            # }
-            # client_message = get_template('customer-mesg.html').render(client_ctx)
-            # client_msg = EmailMessage(
-            #         settings.EMAIL_THANK_YOU_MESSAGE,
-            #         client_message,
-            #         settings.EMAIL_HOST_USER,
-            #         [serializer.data["email"]]
-            # )
+            client_ctx = {
+                'user': serializer.data["firstName"], 
+            }
+            client_message = get_template('customer-mesg.html').render(client_ctx)
+            client_msg = EmailMessage(
+                    settings.EMAIL_THANK_YOU_MESSAGE,
+                    client_message,
+                    settings.EMAIL_HOST_USER,
+                    [serializer.data["email"]]
+            )
            
-            # #client_msg.attach_file('backend/build/static/media/careers-bg.80584c0384ccc0127d23.jpg')
-            # if (categoryId and categoryId.strip()):
-            #     snippet = Category.objects.get(pk=categoryId)
-            #     serializer = CategorySerializer(snippet)
-            #     file_name = serializer.data["category_name"]
-            #     category_fileuplod = serializer.data["category_fileuplod"]
-            #     print("category_fileuplod", category_fileuplod)
-            #     if (category_fileuplod and category_fileuplod.strip()):                     
-            #             full_path = os.path.join(settings.BASE_DIR, *category_fileuplod.split("/"))
+            #client_msg.attach_file('backend/build/static/media/careers-bg.80584c0384ccc0127d23.jpg')
+            if (categoryId and categoryId.strip()):
+                snippet = Category.objects.get(pk=categoryId)
+                serializer = CategorySerializer(snippet)
+                file_name = serializer.data["category_name"]
+                category_fileuplod = serializer.data["category_fileuplod"]
+                print("category_fileuplod", category_fileuplod)
+                if (category_fileuplod and category_fileuplod.strip()):                     
+                        full_path = os.path.join(settings.BASE_DIR, *category_fileuplod.split("/"))
                        
-            #             with open(full_path,'rb') as file:
-            #                 file_content = file.read()
+                        with open(full_path,'rb') as file:
+                            file_content = file.read()
 
-            #                 mime_type = magic.from_buffer(file_content, mime=True)
-            #                 client_msg.attach(file_name, file_content, mime_type)
-            #                 print("file_name", file_name)
-            #                 print("mime_type", mime_type)
+                            mime_type = magic.from_buffer(file_content, mime=True)
+                            client_msg.attach(file_name, file_content, mime_type)
+                            print("file_name", file_name)
+                            print("mime_type", mime_type)
 
-            # client_msg.content_subtype ="html"# Main content is now text/html
-            # client_msg.send()
+            client_msg.content_subtype ="html"# Main content is now text/html
+            client_msg.send()
         
             return Response(status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
