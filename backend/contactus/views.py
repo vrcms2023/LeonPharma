@@ -80,16 +80,15 @@ class ContactUSAPIView(generics.CreateAPIView):
                 serializer = CategorySerializer(snippet)
                 file_name = serializer.data["category_name"]
                 category_fileuplod = serializer.data["category_fileuplod"]
-
+               
                 if (category_fileuplod and category_fileuplod.strip()):                     
                         full_path = os.path.join(settings.BASE_DIR, *category_fileuplod.split("/"))
                        
                         with open(full_path,'rb') as file:
                             file_content = file.read()
-
                             mime_type = magic.from_buffer(file_content, mime=True)
                             client_msg.attach(file_name, file_content, mime_type)
-
+                            
             client_msg.content_subtype ="html"# Main content is now text/html
             client_msg.send()
         
